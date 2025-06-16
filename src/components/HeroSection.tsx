@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Download, Github } from "lucide-react";
 
@@ -62,7 +63,7 @@ const HeroSection = () => {
                 <div className="bg-appPrimary/20 border border-appPrimary/30 rounded-lg p-3 ml-8">
                   <div className="text-sm text-appOnPrimary">Message encrypted and sent via TOR</div>
                   <div className="text-xs text-appPrimary mt-1 flex items-center">
-                    <Shield className="h-3 w-3 mr-1" />
+                    <div className="w-3 h-3 bg-appPrimary rounded mr-1"></div>
                     End-to-end encrypted
                   </div>
                 </div>

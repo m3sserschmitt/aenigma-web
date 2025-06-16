@@ -1,24 +1,19 @@
 
 import { Button } from "@/components/ui/button";
-import { Download, Github, Shield } from "lucide-react";
+import { Download, Github } from "lucide-react";
 
 const CallToAction = () => {
   return (
     <section id="download" className="py-20 px-4 bg-gradient-to-r from-appPrimary/10 to-appSecondary/10">
       <div className="container mx-auto text-center">
         <div className="max-w-4xl mx-auto">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-appPrimary/10 border border-appPrimary/20 rounded-full mb-8">
-            <Shield className="h-4 w-4 text-appPrimary" />
-            <span className="text-sm text-appPrimary font-medium">Ready for Production</span>
-          </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-appOnPrimary">
             Ready to Secure Your
             <span className="text-appPrimary"> Communications?</span>
           </h2>
           
           <p className="text-xl text-appOnBackground mb-12 leading-relaxed">
-            Join thousands of privacy-conscious users who trust SecureChat for their most sensitive conversations. 
+            Join thousands of privacy-conscious users who trust Aenigma for their most sensitive conversations. 
             Download now and experience true digital privacy.
           </p>
           

@@ -46,8 +46,8 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-appSurface/80 backdrop-blur-sm border-b border-appSurfaceHighest z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Shield className="h-8 w-8 text-appPrimary" />
-            <span className="text-xl font-bold text-appOnPrimary">SecureChat</span>
+            <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-8 w-8" />
+            <span className="text-xl font-bold text-appOnPrimary">Aenigma</span>
           </div>
           <div className="hidden md:flex space-x-6">
             <a href="#features" className="hover:text-appPrimary transition-colors text-appOnSurface">Features</a>
@@ -122,18 +122,6 @@ const Index = () => {
                     </p>
                   </div>
                 </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="bg-appSecondary/20 p-2 rounded-lg">
-                    <Users className="h-6 w-6 text-appSecondary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">Forward Secrecy</h3>
-                    <p className="text-appOnBackground">
-                      Advanced key rotation ensures that even if a key is compromised, past and future messages remain secure.
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
             
@@ -155,14 +143,6 @@ const Index = () => {
                       <span className="text-appPrimary text-sm font-medium">Connected</span>
                     </div>
                   </div>
-                  
-                  <div className="flex items-center justify-between p-4 bg-appSurface/50 rounded-lg border border-appSurfaceHighest">
-                    <span className="text-sm text-appOnSurface">Key Exchange</span>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-appSecondary rounded-full animate-pulse"></div>
-                      <span className="text-appSecondary text-sm font-medium">Perfect Forward Secrecy</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -177,8 +157,8 @@ const Index = () => {
       <footer className="py-12 px-4 border-t border-appSurfaceHighest">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <Shield className="h-6 w-6 text-appPrimary" />
-            <span className="text-lg font-semibold text-appOnPrimary">SecureChat</span>
+            <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-6 w-6" />
+            <span className="text-lg font-semibold text-appOnPrimary">Aenigma</span>
           </div>
           <p className="text-appOnBackground mb-4">
             Privacy-first messaging for the security-conscious
@@ -190,7 +170,7 @@ const Index = () => {
             <a href="#" className="hover:text-appOnPrimary transition-colors">Security Audit</a>
           </div>
           <p className="text-appSecondary text-sm mt-4">
-            © 2024 SecureChat. Open source and auditable.
+            © 2024 Aenigma. Open source and auditable.
           </p>
         </div>
       </footer>

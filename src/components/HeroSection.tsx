@@ -49,10 +49,10 @@ const HeroSection = () => {
             <div className="bg-appBackground rounded-2xl p-4 space-y-3">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-appPrimary to-appSecondary rounded-full flex items-center justify-center">
-                  <Shield className="h-5 w-5 text-appOnPrimary" />
+                  <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-5 w-5" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-appOnPrimary">SecureChat</div>
+                  <div className="text-sm font-medium text-appOnPrimary">Aenigma</div>
                   <div className="text-xs text-appPrimary flex items-center">
                     <div className="w-2 h-2 bg-appPrimary rounded-full mr-1"></div>
                     TOR Connected

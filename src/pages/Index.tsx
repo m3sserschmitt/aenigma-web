@@ -116,6 +116,18 @@ const Index = () => {
                     <Lock className="h-6 w-6 text-appPrimary" />
                   </div>
                   <div>
+                    <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">Public Key Cryptography</h3>
+                    <p className="text-appOnBackground">
+                      Built on pure public key encryption - no session keys or preshared secrets required. Each message is encrypted directly using the recipient's public key, eliminating the need for key distribution or server-side key management.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="bg-appPrimary/20 p-2 rounded-lg">
+                    <Lock className="h-6 w-6 text-appPrimary" />
+                  </div>
+                  <div>
                     <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">TOR Network Privacy</h3>
                     <p className="text-appOnBackground">
                       All communications are routed through the TOR network, ensuring your IP address and location remain completely anonymous.

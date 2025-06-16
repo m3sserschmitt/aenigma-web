@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Download, Github } from "lucide-react";
 
@@ -12,22 +13,23 @@ const HeroSection = () => {
       
       <div className="container mx-auto text-center relative z-10">
         <div className="flex justify-center mb-8 animate-fade-in">
-          <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-20 w-20" />
+          <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-32 w-32" />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
           <span className="text-appOnPrimary">
-            Secure Communication
+            Break Free From
           </span>
           <br />
           <span className="text-appPrimary">
-            Redefined
+            Big Tech Surveillance
           </span>
         </h1>
         
         <p className="text-xl md:text-2xl text-appOnBackground mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
-          Experience military-grade encryption with OpenSSL EVP, complete anonymity through TOR network integration, 
-          and secure group messaging in one powerful Android application.
+          Tired of WhatsApp, Telegram, and Signal collecting your data? Aenigma puts you back in control with 
+          military-grade encryption, complete anonymity through TOR, and zero data collection. 
+          Your conversations, your privacy, your choice.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in">

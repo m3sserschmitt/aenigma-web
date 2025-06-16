@@ -49,8 +49,8 @@ const HeroSection = () => {
           <div className="bg-gradient-to-b from-appSurface to-appPrimaryContainer rounded-3xl p-6 border border-appSurfaceHighest shadow-2xl">
             <div className="bg-appBackground rounded-2xl p-4 space-y-3">
               <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-r from-appPrimary to-appSecondary rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-7 w-7" />
+                <div className="w-16 h-16 bg-gradient-to-r from-appPrimary to-appSecondary rounded-full flex items-center justify-center">
+                  <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-12 w-12" />
                 </div>
                 <div>
                   <div className="text-sm font-medium text-appOnPrimary">Aenigma</div>

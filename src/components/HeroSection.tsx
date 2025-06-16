@@ -1,6 +1,5 @@
-
 import { Button } from "@/components/ui/button";
-import { Shield, Download, Github } from "lucide-react";
+import { Download, Github } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -11,9 +10,8 @@ const HeroSection = () => {
       <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-appSecondary/10 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto text-center relative z-10">
-        <div className="inline-flex items-center space-x-2 px-4 py-2 bg-appPrimary/10 border border-appPrimary/20 rounded-full mb-8 animate-fade-in">
-          <Shield className="h-4 w-4 text-appPrimary" />
-          <span className="text-sm text-appPrimary font-medium">End-to-End Encrypted Messaging</span>
+        <div className="flex justify-center mb-8 animate-fade-in">
+          <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-20 w-20" />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
@@ -48,8 +46,8 @@ const HeroSection = () => {
           <div className="bg-gradient-to-b from-appSurface to-appPrimaryContainer rounded-3xl p-6 border border-appSurfaceHighest shadow-2xl">
             <div className="bg-appBackground rounded-2xl p-4 space-y-3">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-appPrimary to-appSecondary rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-5 w-5" />
+                <div className="w-12 h-12 bg-gradient-to-r from-appPrimary to-appSecondary rounded-full flex items-center justify-center">
+                  <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-7 w-7" />
                 </div>
                 <div>
                   <div className="text-sm font-medium text-appOnPrimary">Aenigma</div>

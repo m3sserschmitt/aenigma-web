@@ -46,7 +46,7 @@ const Index = () => {
       <nav className="fixed top-0 w-full bg-appSurface/80 backdrop-blur-sm border-b border-appSurfaceHighest z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-8 w-8" />
+            <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-10 w-10" />
             <span className="text-xl font-bold text-appOnPrimary">Aenigma</span>
           </div>
           <div className="hidden md:flex space-x-6">
@@ -135,7 +135,7 @@ const Index = () => {
       <footer className="py-12 px-4 border-t border-appSurfaceHighest">
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-6 w-6" />
+            <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-8 w-8" />
             <span className="text-lg font-semibold text-appOnPrimary">Aenigma</span>
           </div>
           <p className="text-appOnBackground mb-4">

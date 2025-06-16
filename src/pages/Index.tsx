@@ -153,12 +153,22 @@ const Index = () => {
           <p className="text-appOnBackground mb-4">
             Privacy-first messaging for the security-conscious
           </p>
-          <div className="flex justify-center space-x-6 text-sm text-appOnBackground">
-            <a href="#" className="hover:text-appOnPrimary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-appOnPrimary transition-colors">Terms of Service</a>
+          <div className="flex justify-center space-x-6 text-sm text-appOnBackground mb-6">
+            <a href="#privacy" className="hover:text-appOnPrimary transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-appOnPrimary transition-colors">Source Code</a>
-            <a href="#" className="hover:text-appOnPrimary transition-colors">Security Audit</a>
           </div>
+          
+          {/* Privacy Policy Section */}
+          <div id="privacy" className="max-w-2xl mx-auto mb-6 p-6 bg-appSurface/30 rounded-lg border border-appSurfaceHighest">
+            <h3 className="text-lg font-semibold text-appOnPrimary mb-3">Privacy Policy</h3>
+            <p className="text-appOnBackground text-sm leading-relaxed">
+              Aenigma does not collect, store, or process any personal information about its users. 
+              We have no servers, no databases, and no tracking. Your communications are encrypted 
+              end-to-end and routed through the TOR network for complete anonymity. We cannot and 
+              will not access your messages, contacts, or any other personal data.
+            </p>
+          </div>
+          
           <p className="text-appSecondary text-sm mt-4">
             © 2024 Aenigma. Open source and auditable.
           </p>

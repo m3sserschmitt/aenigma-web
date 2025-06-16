@@ -38,8 +38,8 @@ const CallToAction = () => {
           
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="p-6 bg-appSurface/30 rounded-lg border border-appSurfaceHighest">
-              <div className="text-3xl font-bold text-appPrimary mb-2">256-bit</div>
-              <div className="text-appOnSurface">AES Encryption</div>
+              <div className="text-3xl font-bold text-appPrimary mb-2">OpenSSL</div>
+              <div className="text-appOnSurface">Backed by OpenSSL</div>
             </div>
             
             <div className="p-6 bg-appSurface/30 rounded-lg border border-appSurfaceHighest">

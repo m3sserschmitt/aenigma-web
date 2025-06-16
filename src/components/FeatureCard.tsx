@@ -11,17 +11,17 @@ interface FeatureCardProps {
 const FeatureCard = ({ icon, title, description, delay = 0 }: FeatureCardProps) => {
   return (
     <Card 
-      className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-all duration-300 hover:scale-105 hover:border-blue-500/50 animate-fade-in"
+      className="bg-appSurface/50 border-appSurfaceHighest hover:bg-appSurface/70 transition-all duration-300 hover:scale-105 hover:border-appPrimary/50 animate-fade-in"
       style={{ animationDelay: `${delay}s` }}
     >
       <CardHeader>
         <div className="mb-4">
           {icon}
         </div>
-        <CardTitle className="text-xl text-white">{title}</CardTitle>
+        <CardTitle className="text-xl text-appOnPrimary">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-gray-300 text-base leading-relaxed">
+        <CardDescription className="text-appOnBackground text-base leading-relaxed">
           {description}
         </CardDescription>
       </CardContent>

@@ -23,35 +23,35 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				background: 'hsl(var(--background))',
-				foreground: 'hsl(var(--foreground))',
+				background: '#212121', // Almost Black Gray
+				foreground: '#BDBDBD', // Text on Dark Background
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					DEFAULT: '#757575', // Medium Gray
+					foreground: '#FAFAFA' // Light Text
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))'
+					DEFAULT: '#616161', // Secondary Gray
+					foreground: '#E0E0E0' // Light Text on Secondary
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
-					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))'
+					DEFAULT: '#424242', // Dark Container
+					foreground: '#ECEFF1' // Light Text on Dark Container
 				},
 				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					DEFAULT: '#303030', // Dark Surface
+					foreground: '#E0E0E0' // Light Text on Surface
 				},
 				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
+					DEFAULT: '#303030', // Dark Surface
+					foreground: '#E0E0E0' // Light Text on Surface
 				},
 				card: {
-					DEFAULT: 'hsl(var(--card))',
-					foreground: 'hsl(var(--card-foreground))'
+					DEFAULT: '#303030', // Dark Surface
+					foreground: '#E0E0E0' // Light Text on Surface
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -62,7 +62,21 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors from your palette
+				appPrimary: '#757575',
+				appOnPrimary: '#FAFAFA',
+				appPrimaryContainer: '#424242',
+				appOnPrimaryContainer: '#ECEFF1',
+				appSecondary: '#616161',
+				appOnSecondary: '#E0E0E0',
+				appSecondaryContainer: 'rgba(21, 21, 23, 0.627)',
+				appOnSecondaryContainer: '#CFD8DC',
+				appBackground: '#212121',
+				appOnBackground: '#BDBDBD',
+				appSurface: '#303030',
+				appOnSurface: '#E0E0E0',
+				appSurfaceHighest: '#3A3A3A'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -124,28 +124,6 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="relative">
-              <div className="bg-appSurfaceHighest/50 rounded-2xl p-8 border border-appSurfaceHighest">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 bg-appSurface/50 rounded-lg border border-appSurfaceHighest">
-                    <span className="text-sm text-appOnSurface">Encryption Status</span>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-appPrimary rounded-full animate-pulse"></div>
-                      <span className="text-appPrimary text-sm font-medium">Active</span>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-center justify-between p-4 bg-appSurface/50 rounded-lg border border-appSurfaceHighest">
-                    <span className="text-sm text-appOnSurface">TOR Connection</span>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-appPrimary rounded-full animate-pulse"></div>
-                      <span className="text-appPrimary text-sm font-medium">Connected</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

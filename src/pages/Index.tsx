@@ -168,9 +168,9 @@ const Index = () => {
             <h3 className="text-lg font-semibold text-appOnPrimary mb-3">Privacy Policy</h3>
             <p className="text-appOnBackground text-sm leading-relaxed">
               Aenigma does not collect, store, or process any personal information about its users. 
-              We have no servers, no databases, and no tracking. Your communications are encrypted 
-              end-to-end and routed through the TOR network for complete anonymity. We cannot and 
-              will not access your messages, contacts, or any other personal data.
+              Your communications are end-to-end encrypted and routed through the TOR network for 
+              complete anonymity. We cannot and will not access your messages, contacts, or any 
+              other personal data.
             </p>
           </div>
           

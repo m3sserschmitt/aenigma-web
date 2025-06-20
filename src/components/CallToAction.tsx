@@ -21,6 +21,7 @@ const CallToAction = () => {
             <Button 
               size="lg" 
               className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank')}
             >
               <Download className="h-6 w-6 mr-3" />
               Download for Android
@@ -30,6 +31,7 @@ const CallToAction = () => {
               variant="outline" 
               size="lg" 
               className="border-appSurfaceHighest text-appOnSurface hover:bg-appSurface hover:border-appPrimary text-lg px-10 py-6 h-auto transition-all duration-300"
+              onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android', '_blank')}
             >
               <Github className="h-6 w-6 mr-3" />
               View on GitHub

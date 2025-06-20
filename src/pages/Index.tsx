@@ -54,7 +54,11 @@ const Index = () => {
             <a href="#security" className="hover:text-appPrimary transition-colors text-appOnSurface">Security</a>
             <a href="#download" className="hover:text-appPrimary transition-colors text-appOnSurface">Download</a>
           </div>
-          <Button variant="outline" className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary">
+          <Button 
+            variant="outline" 
+            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
+            onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank')}
+          >
             <Download className="h-4 w-4 mr-2" />
             Get App
           </Button>
@@ -155,7 +159,7 @@ const Index = () => {
           </p>
           <div className="flex justify-center space-x-6 text-sm text-appOnBackground mb-6">
             <a href="#privacy" className="hover:text-appOnPrimary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-appOnPrimary transition-colors">Source Code</a>
+            <a href="https://github.com/m3sserschmitt/aenigma-android" target="_blank" rel="noopener noreferrer" className="hover:text-appOnPrimary transition-colors">Source Code</a>
           </div>
           
           {/* Privacy Policy Section */}

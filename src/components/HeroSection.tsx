@@ -1,5 +1,4 @@
 
-
 import { Button } from "@/components/ui/button";
 import { Download, Github } from "lucide-react";
 
@@ -33,12 +32,21 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in">
-          <Button size="lg" className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-8 py-4 h-auto">
+          <Button 
+            size="lg" 
+            className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-8 py-4 h-auto"
+            onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank')}
+          >
             <Download className="h-5 w-5 mr-2" />
             Download for Android
           </Button>
           
-          <Button variant="outline" size="lg" className="border-appSurfaceHighest text-appOnSurface hover:bg-appSurface text-lg px-8 py-4 h-auto">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="border-appSurfaceHighest text-appOnSurface hover:bg-appSurface text-lg px-8 py-4 h-auto"
+            onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android', '_blank')}
+          >
             <Github className="h-5 w-5 mr-2" />
             View Source Code
           </Button>

@@ -1,3 +1,4 @@
+
 import { Shield, MessageSquare, Users, Lock, Download, Github, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -173,7 +174,7 @@ const Index = () => {
           </div>
           
           <p className="text-appSecondary text-sm mt-4">
-            © 2024 Aenigma. Open source and auditable.
+            © 2025 Aenigma. Open source and auditable.
           </p>
         </div>
       </footer>

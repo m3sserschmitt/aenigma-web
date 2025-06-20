@@ -1,4 +1,5 @@
 
+
 import { Shield, MessageSquare, Users, Lock, Download, Github, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -26,7 +27,7 @@ const Index = () => {
     {
       icon: <MessageSquare className="h-8 w-8 text-appSecondary" />,
       title: "Zero Knowledge Architecture",
-      description: "Our servers never have access to your messages, contacts, or metadata. True privacy by design."
+      description: "No one can read your messages even if they want to. True privacy by design."
     },
     {
       icon: <Smartphone className="h-8 w-8 text-appPrimary" />,
@@ -183,3 +184,4 @@ const Index = () => {
 };
 
 export default Index;
+

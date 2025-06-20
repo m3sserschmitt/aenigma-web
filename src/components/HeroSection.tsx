@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Download, Github } from "lucide-react";
 
@@ -26,9 +25,7 @@ const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-appOnBackground mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
-          Tired of WhatsApp, Telegram, and Signal collecting your data? Aenigma puts you back in control with 
-          industry-standard encryption, complete anonymity through TOR, and zero data collection. 
-          Your conversations, your privacy, your choice.
+          Democracy is also built by the means of information technology - from letters and newspapers to modern telecommunications. Liberty will flourish only when people are free to exchange ideas.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in">

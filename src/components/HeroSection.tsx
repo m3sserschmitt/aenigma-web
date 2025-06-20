@@ -17,7 +17,7 @@ const HeroSection = () => {
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
           <span className="text-appOnPrimary">
-            Break Free From
+            Take a Stand Against
           </span>
           <br />
           <span className="text-appPrimary">
@@ -27,7 +27,7 @@ const HeroSection = () => {
         
         <p className="text-xl md:text-2xl text-appOnBackground mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
           Tired of WhatsApp, Telegram, and Signal collecting your data? Aenigma puts you back in control with 
-          military-grade encryption, complete anonymity through TOR, and zero data collection. 
+          industry-standard encryption, complete anonymity through TOR, and zero data collection. 
           Your conversations, your privacy, your choice.
         </p>
         

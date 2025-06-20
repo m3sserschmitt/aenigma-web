@@ -1,4 +1,3 @@
-
 import { Shield, MessageSquare, Users, Lock, Download, Github, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,7 +10,7 @@ const Index = () => {
     {
       icon: <Shield className="h-8 w-8 text-appPrimary" />,
       title: "End-to-End Encryption",
-      description: "Military-grade encryption using OpenSSL's EVP API ensures your messages remain private and secure from any third-party interference."
+      description: "Industry-standard encryption using OpenSSL's EVP API ensures your messages remain private and secure from any third-party interference."
     },
     {
       icon: <Lock className="h-8 w-8 text-appPrimary" />,

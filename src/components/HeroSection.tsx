@@ -65,23 +65,23 @@ const HeroSection = () => {
                   <div className="text-sm font-medium text-appOnPrimary">Aenigma</div>
                   <div className="text-xs text-appPrimary flex items-center">
                     <div className="w-2 h-2 bg-appPrimary rounded-full mr-1"></div>
-                    TOR Connected
+                    {t('hero.mockup.torConnected')}
                   </div>
                 </div>
               </div>
               
               <div className="space-y-2">
                 <div className="bg-appPrimary/20 border border-appPrimary/30 rounded-lg p-3 ml-8">
-                  <div className="text-sm text-appOnPrimary">Message encrypted and sent via TOR</div>
+                  <div className="text-sm text-appOnPrimary">{t('hero.mockup.messageEncrypted')}</div>
                   <div className="text-xs text-appPrimary mt-1 flex items-center">
                     <div className="w-3 h-3 bg-appPrimary rounded mr-1"></div>
-                    End-to-end encrypted
+                    {t('hero.mockup.endToEndEncrypted')}
                   </div>
                 </div>
                 
                 <div className="bg-appSurfaceHighest/50 border border-appSurfaceHighest rounded-lg p-3 mr-8">
-                  <div className="text-sm text-appOnSurface">Your messages are completely private</div>
-                  <div className="text-xs text-appOnSurface mt-1">✓ Delivered securely</div>
+                  <div className="text-sm text-appOnSurface">{t('hero.mockup.messagesPrivate')}</div>
+                  <div className="text-xs text-appOnSurface mt-1">{t('hero.mockup.deliveredSecurely')}</div>
                 </div>
               </div>
             </div>

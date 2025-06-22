@@ -24,6 +24,11 @@ const translations = {
     'hero.subtitle': 'Democracy is also built by the means of information technology - from letters and newspapers to modern telecommunications. Liberty will flourish only when people are free to exchange ideas.',
     'hero.downloadButton': 'Download for Android',
     'hero.githubButton': 'View Source Code',
+    'hero.mockup.torConnected': 'TOR Connected',
+    'hero.mockup.messageEncrypted': 'Message encrypted and sent via TOR',
+    'hero.mockup.endToEndEncrypted': 'End-to-end encrypted',
+    'hero.mockup.messagesPrivate': 'Your messages are completely private',
+    'hero.mockup.deliveredSecurely': '✓ Delivered securely',
     
     // Features
     'features.title': 'Advanced Security Features',
@@ -55,6 +60,9 @@ const translations = {
     'cta.subtitle': 'Join thousands of users who trust Aenigma for their private messaging needs',
     'cta.downloadButton': 'Download Now',
     'cta.githubButton': 'Explore Code',
+    'cta.openssl': 'Backed by OpenSSL',
+    'cta.openSource': 'Open Source',
+    'cta.dataCollection': 'Data Collection',
     
     // Footer
     'footer.tagline': 'Privacy-first messaging for the security-conscious',
@@ -77,6 +85,11 @@ const translations = {
     'hero.subtitle': 'Democrația se construiește și prin mijloacele tehnologiei informației - de la scrisori și ziare la telecomunicațiile moderne. Libertatea va înflori doar când oamenii sunt liberi să facă schimb de idei.',
     'hero.downloadButton': 'Descarcă pentru Android',
     'hero.githubButton': 'Vezi Codul Sursă',
+    'hero.mockup.torConnected': 'TOR Conectat',
+    'hero.mockup.messageEncrypted': 'Mesaj criptat și trimis prin TOR',
+    'hero.mockup.endToEndEncrypted': 'Criptat end-to-end',
+    'hero.mockup.messagesPrivate': 'Mesajele tale sunt complet private',
+    'hero.mockup.deliveredSecurely': '✓ Livrat în siguranță',
     
     // Features
     'features.title': 'Funcționalități Avansate de Securitate',
@@ -108,6 +121,9 @@ const translations = {
     'cta.subtitle': 'Alătură-te miilor de utilizatori care au încredere în Aenigma pentru nevoile lor de mesagerie privată',
     'cta.downloadButton': 'Descarcă Acum',
     'cta.githubButton': 'Explorează Codul',
+    'cta.openssl': 'Susținut de OpenSSL',
+    'cta.openSource': 'Open Source',
+    'cta.dataCollection': 'Colectare Date',
     
     // Footer
     'footer.tagline': 'Mesagerie privacy-first pentru cei conștienți de securitate',

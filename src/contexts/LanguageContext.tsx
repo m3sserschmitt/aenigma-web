@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'ro';
@@ -105,7 +104,7 @@ const translations = {
     'features.zeroKnowledge.description': 'Nimeni nu poate citi mesajele tale chiar dacă ar vrea. Intimitate adevărată prin design.',
     'features.android.title': 'Performanță Nativă Android',
     'features.android.description': 'Optimizat pentru dispozitivele Android cu utilizarea eficientă a bateriei și integrarea perfectă cu funcțiile de securitate ale dispozitivului.',
-    'features.openSource.title': 'Transparența Open Source',
+    'features.openSource.title': 'Transparența Sursă Deschisă',
     'features.openSource.description': 'Cod sursă deschis ce poate fi auditat în egală măsură de experți în securitate și comunitate.',
     
     // Security Section
@@ -123,7 +122,7 @@ const translations = {
     'cta.downloadButton': 'Descarcă Acum',
     'cta.githubButton': 'Explorează Codul',
     'cta.openssl': 'Bazat pe OpenSSL',
-    'cta.openSource': 'Open Source',
+    'cta.openSource': 'Sursă Deschisă',
     'cta.dataCollection': 'Date Colectate',
     
     // Footer
@@ -132,7 +131,7 @@ const translations = {
     'footer.sourceCode': 'Codul Sursă',
     'footer.privacyTitle': 'Politica de Confidențialitate',
     'footer.privacyText': 'Aenigma nu colectează, nu stochează și nu procesează nicio informație personală despre utilizatorii săi. Comunicațiile tale sunt criptate end-to-end și rutate prin rețeaua TOR pentru anonimat complet. Nu putem și nu vom accesa mesajele tale, contactele sau alte date personale.',
-    'footer.copyright': '© 2025 Aenigma. Open source și auditabil.'
+    'footer.copyright': '© 2025 Aenigma. Sursă deschisă și auditabil.'
   }
 };
 

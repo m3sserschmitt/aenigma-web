@@ -151,7 +151,7 @@ const translations = {
     'howItWorks.subtitle': 'Aplicația noastră folosește criptarea de la un capăt la altul pentru a se asigura că mesajele tale rămân private, autentice și sigure — din momentul în care le trimiți până în momentul în care ajung.',
     'howItWorks.protection.title': 'Cum Îți Protejăm Mesajele',
     'howItWorks.protection.description': 'Fiecare mesaj este protejat folosind o combinație de criptare puternică și semnături digitale. Iată cum funcționează:',
-    'howItWorks.hybrid.title': 'Criptarea Hibridă: Cel Mai Bun din Ambele Lumi',
+    'howItWorks.hybrid.title': 'Criptarea Hibridă: Cel e Mai Bun din Ambele Lumi',
     'howItWorks.hybrid.description': 'Combinăm două tipuri de criptare:',
     'howItWorks.aes.title': 'AES-256-GCM',
     'howItWorks.aes.description': 'un algoritm de criptare rapid și sigur care protejează fiecare mesaj folosind o cheie unică, generată aleatoriu. De asemenea, oferă autentificare încorporată, astfel încât să știi că mesajul nu a fost modificat.',

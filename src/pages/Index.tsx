@@ -56,6 +56,7 @@ const Index = () => {
           <div className="hidden md:flex space-x-6">
             <a href="#features" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.features')}</a>
             <a href="#security" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.security')}</a>
+            <a href="/how-it-works" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.howItWorks')}</a>
             <a href="#download" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.download')}</a>
           </div>
           <div className="flex items-center space-x-2">

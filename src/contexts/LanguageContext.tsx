@@ -81,7 +81,7 @@ const translations = {
     
     // Hero Section
     'hero.title1': 'Luptă Împotriva',
-    'hero.title2': 'Supravegherii Big Tech',
+    'hero.title2': 'Hegemoniei Big Tech',
     'hero.subtitle': 'Democrația se construiește și prin mijloacele tehnologiei informației - de la scrisori și ziare la telecomunicațiile moderne. Libertatea va înflori doar când oamenii sunt liberi să facă schimb de idei.',
     'hero.downloadButton': 'Descarcă pentru Android',
     'hero.githubButton': 'Vezi Codul Sursă',
@@ -121,9 +121,9 @@ const translations = {
     'cta.subtitle': 'Alătură-te miilor de utilizatori care au încredere în Aenigma pentru nevoile lor de mesagerie privată',
     'cta.downloadButton': 'Descarcă Acum',
     'cta.githubButton': 'Explorează Codul',
-    'cta.openssl': 'Susținut de OpenSSL',
+    'cta.openssl': 'Bazat pe OpenSSL',
     'cta.openSource': 'Open Source',
-    'cta.dataCollection': 'Colectare Date',
+    'cta.dataCollection': 'Date Colectate',
     
     // Footer
     'footer.tagline': 'Mesagerie privacy-first pentru cei conștienți de securitate',

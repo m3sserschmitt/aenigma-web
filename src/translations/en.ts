@@ -88,20 +88,4 @@ export const enTranslations = {
   'footer.privacyTitle': 'Privacy policy',
   'footer.privacyText': 'Aenigma does not collect, store, or process any personal information about its users. Your communications are end-to-end encrypted and routed through the TOR network for complete anonymity. We cannot and will not access your messages, contacts, or any other personal data.',
   'footer.copyright': '© 2025 Aenigma. Open source and auditable.',
-
-  // Encryption Flow
-  'encryptionFlow.title': 'How encryption works: the envelope method',
-  'encryptionFlow.subtitle': 'Think of our encryption like sending a secure letter. Here\'s how your message gets protected step by step.',
-  'encryptionFlow.writeMessage.title': 'Write your message',
-  'encryptionFlow.writeMessage.description': 'You type your message just like writing a letter. This is your plain text that needs protection.',
-  'encryptionFlow.putInEnvelope.title': 'Put it in an envelope',
-  'encryptionFlow.putInEnvelope.description': 'Your message gets encrypted with AES-256-GCM using a random key - like putting your letter in a secure envelope.',
-  'encryptionFlow.sealEnvelope.title': 'Seal the envelope',
-  'encryptionFlow.sealEnvelope.description': 'The random key is encrypted with RSA-4096 using the recipient\'s public key - like sealing the envelope so only they can open it.',
-  'encryptionFlow.signEnvelope.title': 'Sign the envelope',
-  'encryptionFlow.signEnvelope.description': 'Your private key creates a digital signature - like signing the envelope to prove it\'s really from you.',
-  'encryptionFlow.sendSecurely.title': 'Send securely',
-  'encryptionFlow.sendSecurely.description': 'The signed, sealed envelope travels through TOR network - like using a secure courier service.',
-  'encryptionFlow.securityNote.title': 'Military-grade security',
-  'encryptionFlow.securityNote.description': 'This envelope method combines the speed of AES with the security of RSA, creating unbreakable protection for your messages.',
 };

@@ -4,7 +4,6 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import EncryptionFlow from "@/components/EncryptionFlow";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
@@ -52,9 +51,6 @@ const HowItWorks = () => {
           </p>
         </div>
       </section>
-
-      {/* Encryption Flow - NEW SECTION */}
-      <EncryptionFlow />
 
       {/* Hybrid Encryption & Protection */}
       <section className="py-12 px-4 bg-appSurface/30">

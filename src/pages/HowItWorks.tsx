@@ -1,10 +1,10 @@
-
 import { Shield, Lock, Key, FileSignature, QrCode, Smartphone } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import EncryptionFlow from "@/components/EncryptionFlow";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
@@ -52,6 +52,9 @@ const HowItWorks = () => {
           </p>
         </div>
       </section>
+
+      {/* Encryption Flow - NEW SECTION */}
+      <EncryptionFlow />
 
       {/* Hybrid Encryption & Protection */}
       <section className="py-12 px-4 bg-appSurface/30">

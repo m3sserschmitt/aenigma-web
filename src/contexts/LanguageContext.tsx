@@ -99,7 +99,23 @@ const translations = {
     'footer.sourceCode': 'Source code',
     'footer.privacyTitle': 'Privacy policy',
     'footer.privacyText': 'Aenigma does not collect, store, or process any personal information about its users. Your communications are end-to-end encrypted and routed through the TOR network for complete anonymity. We cannot and will not access your messages, contacts, or any other personal data.',
-    'footer.copyright': '© 2025 Aenigma. Open source and auditable.'
+    'footer.copyright': '© 2025 Aenigma. Open source and auditable.',
+
+    // Encryption Flow
+    'encryptionFlow.title': 'How encryption works: the envelope method',
+    'encryptionFlow.subtitle': 'Think of our encryption like sending a secure letter. Here\'s how your message gets protected step by step.',
+    'encryptionFlow.writeMessage.title': 'Write your message',
+    'encryptionFlow.writeMessage.description': 'You type your message just like writing a letter. This is your plain text that needs protection.',
+    'encryptionFlow.putInEnvelope.title': 'Put it in an envelope',
+    'encryptionFlow.putInEnvelope.description': 'Your message gets encrypted with AES-256-GCM using a random key - like putting your letter in a secure envelope.',
+    'encryptionFlow.sealEnvelope.title': 'Seal the envelope',
+    'encryptionFlow.sealEnvelope.description': 'The random key is encrypted with RSA-4096 using the recipient\'s public key - like sealing the envelope so only they can open it.',
+    'encryptionFlow.signEnvelope.title': 'Sign the envelope',
+    'encryptionFlow.signEnvelope.description': 'Your private key creates a digital signature - like signing the envelope to prove it\'s really from you.',
+    'encryptionFlow.sendSecurely.title': 'Send securely',
+    'encryptionFlow.sendSecurely.description': 'The signed, sealed envelope travels through TOR network - like using a secure courier service.',
+    'encryptionFlow.securityNote.title': 'Military-grade security',
+    'encryptionFlow.securityNote.description': 'This envelope method combines the speed of AES with the security of RSA, creating unbreakable protection for your messages.',
   },
   ro: {
     // Navigation
@@ -189,7 +205,23 @@ const translations = {
     'footer.sourceCode': 'Codul sursă',
     'footer.privacyTitle': 'Politica de confidențialitate',
     'footer.privacyText': 'Aenigma nu colectează, nu stochează și nu procesează nicio informație personală despre utilizatorii săi. Comunicațiile tale sunt criptate de la un capăt la altul și rutate prin rețeaua TOR pentru anonimat complet. Nu putem și nu vom accesa mesajele tale, contactele sau alte date personale.',
-    'footer.copyright': '© 2025 Aenigma. Sursă deschisă și auditabil.'
+    'footer.copyright': '© 2025 Aenigma. Sursă deschisă și auditabil.',
+
+    // Encryption Flow
+    'encryptionFlow.title': 'Cum funcționează criptarea: metoda plicului',
+    'encryptionFlow.subtitle': 'Gândește-te la criptarea noastră ca la trimiterea unei scrisori sigure. Iată cum mesajul tău este protejat pas cu pas.',
+    'encryptionFlow.writeMessage.title': 'Scrie mesajul',
+    'encryptionFlow.writeMessage.description': 'Tastezi mesajul exact ca atunci când scrii o scrisoare. Acesta este textul tău simplu care are nevoie de protecție.',
+    'encryptionFlow.putInEnvelope.title': 'Pune-l în plic',
+    'encryptionFlow.putInEnvelope.description': 'Mesajul tău este criptat cu AES-256-GCM folosind o cheie aleatorie - ca și cum ai pune scrisoarea într-un plic sigur.',
+    'encryptionFlow.sealEnvelope.title': 'Sigilează plicul',
+    'encryptionFlow.sealEnvelope.description': 'Cheia aleatorie este criptată cu RSA-4096 folosind cheia publică a destinatarului - ca și cum ai sigila plicul astfel încât doar el să îl poată deschide.',
+    'encryptionFlow.signEnvelope.title': 'Semnează plicul',
+    'encryptionFlow.signEnvelope.description': 'Cheia ta privată creează o semnătură digitală - ca și cum ai semna plicul pentru a dovedi că este cu adevărat de la tine.',
+    'encryptionFlow.sendSecurely.title': 'Trimite în siguranță',
+    'encryptionFlow.sendSecurely.description': 'Plicul semnat și sigilat călătorește prin rețeaua TOR - ca și cum ai folosi un serviciu de curierat sigur.',
+    'encryptionFlow.securityNote.title': 'Securitate de grad militar',
+    'encryptionFlow.securityNote.description': 'Această metodă a plicului combină viteza AES cu securitatea RSA, creând o protecție de nefranșit pentru mesajele tale.',
   }
 };
 

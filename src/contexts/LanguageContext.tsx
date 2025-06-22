@@ -148,7 +148,7 @@ const translations = {
     
     // How It Works Page
     'howItWorks.title': 'Mesagerie Sigură, Construită pe Criptografie Puternică',
-    'howItWorks.subtitle': 'Aplicația noastră folosește criptarea end-to-end pentru a se asigura că mesajele tale rămân private, autentice și sigure — din momentul în care le trimiți până în momentul în care ajung.',
+    'howItWorks.subtitle': 'Aplicația noastră folosește criptarea de la un capăt la altul pentru a se asigura că mesajele tale rămân private, autentice și sigure — din momentul în care le trimiți până în momentul în care ajung.',
     'howItWorks.protection.title': 'Cum Îți Protejăm Mesajele',
     'howItWorks.protection.description': 'Fiecare mesaj este protejat folosind o combinație de criptare puternică și semnături digitale. Iată cum funcționează:',
     'howItWorks.hybrid.title': 'Criptarea Hibridă: Cel Mai Bun din Ambele Lumi',
@@ -168,7 +168,7 @@ const translations = {
     'howItWorks.authenticity': 'Autenticitate: Destinatarul poate verifica că mesajul a fost chiar trimis de tine.',
     'howItWorks.integrity': 'Integritate: Mesajul nu a fost schimbat sau falsificat.',
     'howItWorks.sharing.title': 'Partajarea Ușoară și Sigură a Cheilor',
-    'howItWorks.sharing.description': 'Pentru a începe să conversezi în siguranță, doar scanează un cod QR sau partajează un link de conexiune. Așa se face schimbul de chei publice. După aceea, toate mesajele dintre tine și contactul tău sunt criptate end-to-end automat.',
+    'howItWorks.sharing.description': 'Pentru a începe să conversezi în siguranță, doar scanează un cod QR sau partajează un link de conexiune. Așa se face schimbul de chei publice. După aceea, toate mesajele dintre tine și contactul tău sunt criptate de la un capăt la altul automat.',
     'howItWorks.privacy.title': 'Intimitatea Ta, Sub Controlul Tău',
     'howItWorks.privacy.point1': 'Cheia ta privată este stocată în siguranță pe dispozitivul tău, protejată de sistemul Android.',
     'howItWorks.privacy.point2': 'Fără stocare în cloud, fără acces pe server, fără uși din spate.',
@@ -188,7 +188,7 @@ const translations = {
     'footer.privacyPolicy': 'Politica de Confidențialitate',
     'footer.sourceCode': 'Codul Sursă',
     'footer.privacyTitle': 'Politica de Confidențialitate',
-    'footer.privacyText': 'Aenigma nu colectează, nu stochează și nu procesează nicio informație personală despre utilizatorii săi. Comunicațiile tale sunt criptate end-to-end și rutate prin rețeaua TOR pentru anonimat complet. Nu putem și nu vom accesa mesajele tale, contactele sau alte date personale.',
+    'footer.privacyText': 'Aenigma nu colectează, nu stochează și nu procesează nicio informație personală despre utilizatorii săi. Comunicațiile tale sunt criptate de la un capăt la altul și rutate prin rețeaua TOR pentru anonimat complet. Nu putem și nu vom accesa mesajele tale, contactele sau alte date personale.',
     'footer.copyright': '© 2025 Aenigma. Sursă deschisă și auditabil.'
   }
 };

@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'ro';
@@ -49,7 +50,7 @@ const translations = {
     // Security Section
     'security.title': 'Uncompromising Security',
     'security.openssl.title': 'OpenSSL EVP Encryption',
-    'security.openssl.description': 'Utilizing OpenSSL\'s high-level envelope cryptographic functions for authenticated encryption with associated data (AEAD).',
+    'security.openssl.description': 'Utilizing OpenSSL\'s high-level envelope cryptographic functions for authenticated encryption.',
     'security.publicKey.title': 'Public Key Cryptography',
     'security.publicKey.description': 'Built on pure public key encryption - no session keys or preshared secrets required. Each message is encrypted directly using the recipient\'s public key, eliminating the need for key distribution or server-side key management.',
     'security.torNetwork.title': 'TOR Network Privacy',
@@ -110,7 +111,7 @@ const translations = {
     // Security Section
     'security.title': 'Securitate Fără Compromisuri',
     'security.openssl.title': 'Criptarea OpenSSL EVP',
-    'security.openssl.description': 'Utilizând funcțiile criptografice de înalt nivel ale OpenSSL pentru criptarea autentificată cu date asociate (AEAD).',
+    'security.openssl.description': 'Utilizând funcțiile criptografice de înalt nivel ale OpenSSL pentru criptarea autentificată.',
     'security.publicKey.title': 'Criptografia cu Cheie Publică',
     'security.publicKey.description': 'Construit pe criptarea pură cu cheie publică - nu sunt necesare chei de sesiune sau secrete pre-partajate. Fiecare mesaj este criptat direct folosind cheia publică a destinatarului, eliminând nevoia de distribuție a cheilor sau gestionarea cheilor pe server.',
     'security.torNetwork.title': 'Intimitatea Rețelei TOR',

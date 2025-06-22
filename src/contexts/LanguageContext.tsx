@@ -85,7 +85,7 @@ const translations = {
     'hero.subtitle': 'Democrația se construiește și prin mijloacele tehnologiei informației - de la scrisori și ziare la telecomunicațiile moderne. Libertatea va înflori doar când oamenii sunt liberi să facă schimb de idei.',
     'hero.downloadButton': 'Descarcă pentru Android',
     'hero.githubButton': 'Vezi Codul Sursă',
-    'hero.mockup.torConnected': 'TOR Conectat',
+    'hero.mockup.torConnected': 'Conectat la TOR',
     'hero.mockup.messageEncrypted': 'Mesaj criptat și trimis prin TOR',
     'hero.mockup.endToEndEncrypted': 'Criptare de la un capăt la altul',
     'hero.mockup.messagesPrivate': 'Mesajele tale sunt complet private',
@@ -93,7 +93,7 @@ const translations = {
     
     // Features
     'features.title': 'Funcționalități Avansate de Securitate',
-    'features.subtitle': 'Construit cu protocoale criptografice de ultimă generație și arhitectură privacy-first',
+    'features.subtitle': 'Construit cu protocoale criptografice de ultimă generație și arhitectură orientată către protejarea intimității utilizatorilor',
     'features.e2e.title': 'Criptare de la un Capăt la Altul',
     'features.e2e.description': 'Criptarea standard din industrie folosind API-ul EVP al OpenSSL asigură că mesajele tale rămân private și sigure de orice interferență din partea terților.',
     'features.tor.title': 'Integrarea Rețelei TOR',
@@ -112,7 +112,7 @@ const translations = {
     'security.openssl.title': 'Criptarea OpenSSL EVP',
     'security.openssl.description': 'Utilizând funcțiile criptografice de înalt nivel ale OpenSSL pentru criptarea autentificată.',
     'security.publicKey.title': 'Criptografia cu Cheie Publică',
-    'security.publicKey.description': 'Construit pe criptarea pură cu cheie publică - nu sunt necesare chei de sesiune sau secrete pre-partajate. Fiecare mesaj este criptat direct folosind cheia publică a destinatarului, eliminând nevoia de distribuție a cheilor sau gestionarea cheilor pe server.',
+    'security.publicKey.description': 'Utilizând criptarea cu chei publice - nu sunt necesare chei de sesiune sau secrete pre-partajate. Fiecare mesaj este criptat direct folosind cheia publică a destinatarului, eliminând nevoia de distribuție a cheilor sau gestionarea cheilor pe server.',
     'security.torNetwork.title': 'Intimitatea Rețelei TOR',
     'security.torNetwork.description': 'Toate comunicațiile sunt rutate prin rețeaua TOR, asigurând că adresa ta IP și locația rămân complet anonime.',
     
@@ -126,7 +126,7 @@ const translations = {
     'cta.dataCollection': 'Date Colectate',
     
     // Footer
-    'footer.tagline': 'Mesagerie privacy-first pentru cei conștienți de securitate',
+    'footer.tagline': 'Mesagerie orientată către protejarea intimității utilizatorilor',
     'footer.privacyPolicy': 'Politica de Confidențialitate',
     'footer.sourceCode': 'Codul Sursă',
     'footer.privacyTitle': 'Politica de Confidențialitate',

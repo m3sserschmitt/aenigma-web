@@ -1,43 +1,46 @@
 
-
 import { Shield, MessageSquare, Users, Lock, Download, Github, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import HeroSection from "@/components/HeroSection";
 import FeatureCard from "@/components/FeatureCard";
 import CallToAction from "@/components/CallToAction";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Index = () => {
+  const { t } = useLanguage();
+
   const features = [
     {
       icon: <Shield className="h-8 w-8 text-appPrimary" />,
-      title: "End-to-End Encryption",
-      description: "Industry-standard encryption using OpenSSL's EVP API ensures your messages remain private and secure from any third-party interference."
+      title: t('features.e2e.title'),
+      description: t('features.e2e.description')
     },
     {
       icon: <Lock className="h-8 w-8 text-appPrimary" />,
-      title: "TOR Network Integration",
-      description: "Route your communications through The Onion Router (TOR) network for maximum anonymity and protection against traffic analysis."
+      title: t('features.tor.title'),
+      description: t('features.tor.description')
     },
     {
       icon: <Users className="h-8 w-8 text-appSecondary" />,
-      title: "Encrypted Group Chats",
-      description: "Create secure group conversations with advanced cryptographic protocols that ensure every participant's privacy is protected."
+      title: t('features.groups.title'),
+      description: t('features.groups.description')
     },
     {
       icon: <MessageSquare className="h-8 w-8 text-appSecondary" />,
-      title: "Zero Knowledge Architecture",
-      description: "No one can read your messages even if they want to. True privacy by design."
+      title: t('features.zeroKnowledge.title'),
+      description: t('features.zeroKnowledge.description')
     },
     {
       icon: <Smartphone className="h-8 w-8 text-appPrimary" />,
-      title: "Native Android Performance",
-      description: "Optimized for Android devices with efficient battery usage and seamless integration with your device's security features."
+      title: t('features.android.title'),
+      description: t('features.android.description')
     },
     {
       icon: <Github className="h-8 w-8 text-appOnBackground" />,
-      title: "Open Source Transparency",
-      description: "Fully open source codebase that can be audited by security researchers and the privacy community."
+      title: t('features.openSource.title'),
+      description: t('features.openSource.description')
     }
   ];
 
@@ -51,18 +54,21 @@ const Index = () => {
             <span className="text-xl font-bold text-appOnPrimary">Aenigma</span>
           </div>
           <div className="hidden md:flex space-x-6">
-            <a href="#features" className="hover:text-appPrimary transition-colors text-appOnSurface">Features</a>
-            <a href="#security" className="hover:text-appPrimary transition-colors text-appOnSurface">Security</a>
-            <a href="#download" className="hover:text-appPrimary transition-colors text-appOnSurface">Download</a>
+            <a href="#features" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.features')}</a>
+            <a href="#security" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.security')}</a>
+            <a href="#download" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.download')}</a>
           </div>
-          <Button 
-            variant="outline" 
-            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
-            onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank')}
-          >
-            <Download className="h-4 w-4 mr-2" />
-            Get App
-          </Button>
+          <div className="flex items-center space-x-2">
+            <LanguageSwitcher />
+            <Button 
+              variant="outline" 
+              className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
+              onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank')}
+            >
+              <Download className="h-4 w-4 mr-2" />
+              {t('nav.getApp')}
+            </Button>
+          </div>
         </div>
       </nav>
 
@@ -74,10 +80,10 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-appOnPrimary">
-              Advanced Security Features
+              {t('features.title')}
             </h2>
             <p className="text-xl text-appOnBackground max-w-3xl mx-auto">
-              Built with cutting-edge cryptographic protocols and privacy-first architecture
+              {t('features.subtitle')}
             </p>
           </div>
           
@@ -101,7 +107,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6 text-appOnPrimary">
-                Uncompromising Security
+                {t('security.title')}
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -109,9 +115,9 @@ const Index = () => {
                     <Shield className="h-6 w-6 text-appPrimary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">OpenSSL EVP Encryption</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">{t('security.openssl.title')}</h3>
                     <p className="text-appOnBackground">
-                      Utilizing OpenSSL's high-level envelope cryptographic functions for authenticated encryption with associated data (AEAD).
+                      {t('security.openssl.description')}
                     </p>
                   </div>
                 </div>
@@ -121,9 +127,9 @@ const Index = () => {
                     <Lock className="h-6 w-6 text-appPrimary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">Public Key Cryptography</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">{t('security.publicKey.title')}</h3>
                     <p className="text-appOnBackground">
-                      Built on pure public key encryption - no session keys or preshared secrets required. Each message is encrypted directly using the recipient's public key, eliminating the need for key distribution or server-side key management.
+                      {t('security.publicKey.description')}
                     </p>
                   </div>
                 </div>
@@ -133,9 +139,9 @@ const Index = () => {
                     <Lock className="h-6 w-6 text-appPrimary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">TOR Network Privacy</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-appOnPrimary">{t('security.torNetwork.title')}</h3>
                     <p className="text-appOnBackground">
-                      All communications are routed through the TOR network, ensuring your IP address and location remain completely anonymous.
+                      {t('security.torNetwork.description')}
                     </p>
                   </div>
                 </div>
@@ -156,26 +162,23 @@ const Index = () => {
             <span className="text-lg font-semibold text-appOnPrimary">Aenigma</span>
           </div>
           <p className="text-appOnBackground mb-4">
-            Privacy-first messaging for the security-conscious
+            {t('footer.tagline')}
           </p>
           <div className="flex justify-center space-x-6 text-sm text-appOnBackground mb-6">
-            <a href="#privacy" className="hover:text-appOnPrimary transition-colors">Privacy Policy</a>
-            <a href="https://github.com/m3sserschmitt/aenigma-android" target="_blank" rel="noopener noreferrer" className="hover:text-appOnPrimary transition-colors">Source Code</a>
+            <a href="#privacy" className="hover:text-appOnPrimary transition-colors">{t('footer.privacyPolicy')}</a>
+            <a href="https://github.com/m3sserschmitt/aenigma-android" target="_blank" rel="noopener noreferrer" className="hover:text-appOnPrimary transition-colors">{t('footer.sourceCode')}</a>
           </div>
           
           {/* Privacy Policy Section */}
           <div id="privacy" className="max-w-2xl mx-auto mb-6 p-6 bg-appSurface/30 rounded-lg border border-appSurfaceHighest">
-            <h3 className="text-lg font-semibold text-appOnPrimary mb-3">Privacy Policy</h3>
+            <h3 className="text-lg font-semibold text-appOnPrimary mb-3">{t('footer.privacyTitle')}</h3>
             <p className="text-appOnBackground text-sm leading-relaxed">
-              Aenigma does not collect, store, or process any personal information about its users. 
-              Your communications are end-to-end encrypted and routed through the TOR network for 
-              complete anonymity. We cannot and will not access your messages, contacts, or any 
-              other personal data.
+              {t('footer.privacyText')}
             </p>
           </div>
           
           <p className="text-appSecondary text-sm mt-4">
-            © 2025 Aenigma. Open source and auditable.
+            {t('footer.copyright')}
           </p>
         </div>
       </footer>
@@ -184,4 +187,3 @@ const Index = () => {
 };
 
 export default Index;
-

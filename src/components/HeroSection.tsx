@@ -1,7 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { Download, Github } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="pt-32 pb-20 px-4 relative overflow-hidden">
       {/* Background Effects */}
@@ -16,16 +20,16 @@ const HeroSection = () => {
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
           <span className="text-appOnPrimary">
-            Take a Stand Against
+            {t('hero.title1')}
           </span>
           <br />
           <span className="text-appPrimary">
-            Big Tech Surveillance
+            {t('hero.title2')}
           </span>
         </h1>
         
         <p className="text-xl md:text-2xl text-appOnBackground mb-12 max-w-4xl mx-auto leading-relaxed animate-fade-in">
-          Democracy is also built by the means of information technology - from letters and newspapers to modern telecommunications. Liberty will flourish only when people are free to exchange ideas.
+          {t('hero.subtitle')}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in">
@@ -35,7 +39,7 @@ const HeroSection = () => {
             onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank')}
           >
             <Download className="h-5 w-5 mr-2" />
-            Download for Android
+            {t('hero.downloadButton')}
           </Button>
           
           <Button 
@@ -45,7 +49,7 @@ const HeroSection = () => {
             onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android', '_blank')}
           >
             <Github className="h-5 w-5 mr-2" />
-            View Source Code
+            {t('hero.githubButton')}
           </Button>
         </div>
         

@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'ro';
@@ -20,8 +19,9 @@ const translations = {
     'nav.getApp': 'Get App',
     
     // Hero Section
-    'hero.title': 'Free and open-source messaging system',
-    'hero.subtitle': 'Democracy is also built by the means of information technology - from letters and newspapers to modern telecommunications. Liberty will flourish only when people are free to exchange ideas',
+    'hero.title1': 'Take a Stand Against',
+    'hero.title2': 'Big Tech Surveillance',
+    'hero.subtitle': 'Democracy is also built by the means of information technology - from letters and newspapers to modern telecommunications. Liberty will flourish only when people are free to exchange ideas.',
     'hero.downloadButton': 'Download for Android',
     'hero.githubButton': 'View Source Code',
     
@@ -72,8 +72,9 @@ const translations = {
     'nav.getApp': 'Descarcă App',
     
     // Hero Section
-    'hero.title': 'Sistem de mesagerie gratuit și open-source',
-    'hero.subtitle': 'Democrația se construiește și prin mijloacele tehnologiei informației - de la scrisori și ziare la telecomunicațiile moderne. Libertatea va înflori doar când oamenii sunt liberi să facă schimb de idei',
+    'hero.title1': 'Luptă Împotriva',
+    'hero.title2': 'Supravegherii Big Tech',
+    'hero.subtitle': 'Democrația se construiește și prin mijloacele tehnologiei informației - de la scrisori și ziare la telecomunicațiile moderne. Libertatea va înflori doar când oamenii sunt liberi să facă schimb de idei.',
     'hero.downloadButton': 'Descarcă pentru Android',
     'hero.githubButton': 'Vezi Codul Sursă',
     

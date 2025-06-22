@@ -105,7 +105,7 @@ const translations = {
     'features.android.title': 'Performanță Nativă Android',
     'features.android.description': 'Optimizat pentru dispozitivele Android cu utilizarea eficientă a bateriei și integrarea perfectă cu funcțiile de securitate ale dispozitivului.',
     'features.openSource.title': 'Transparența Open Source',
-    'features.openSource.description': 'Cod sursă complet open source care poate fi auditat de cercetătorii în securitate și comunitatea privacy.',
+    'features.openSource.description': 'Cod sursă deschis ce poate fi auditat în egală măsură de experți în securitate și comunitate.',
     
     // Security Section
     'security.title': 'Securitate Fără Compromisuri',

@@ -87,14 +87,14 @@ const translations = {
     'hero.githubButton': 'Vezi Codul Sursă',
     'hero.mockup.torConnected': 'TOR Conectat',
     'hero.mockup.messageEncrypted': 'Mesaj criptat și trimis prin TOR',
-    'hero.mockup.endToEndEncrypted': 'Criptat end-to-end',
+    'hero.mockup.endToEndEncrypted': 'Criptare de la un capăt la altul',
     'hero.mockup.messagesPrivate': 'Mesajele tale sunt complet private',
     'hero.mockup.deliveredSecurely': '✓ Livrat în siguranță',
     
     // Features
     'features.title': 'Funcționalități Avansate de Securitate',
     'features.subtitle': 'Construit cu protocoale criptografice de ultimă generație și arhitectură privacy-first',
-    'features.e2e.title': 'Criptare End-to-End',
+    'features.e2e.title': 'Criptare de la un Capăt la Altul',
     'features.e2e.description': 'Criptarea standard din industrie folosind API-ul EVP al OpenSSL asigură că mesajele tale rămân private și sigure de orice interferență din partea terților.',
     'features.tor.title': 'Integrarea Rețelei TOR',
     'features.tor.description': 'Rutează comunicațiile prin rețeaua The Onion Router (TOR) pentru anonimat maxim și protecție împotriva analizei traficului.',

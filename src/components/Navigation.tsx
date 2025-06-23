@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -16,6 +15,17 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
     window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank');
   };
 
+  const handleSectionClick = (sectionId: string) => {
+    if (currentPage === 'index') {
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = `/#${sectionId}`;
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-appSurface/80 backdrop-blur-sm border-b border-appSurfaceHighest z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -24,22 +34,22 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
         </div>
         
         <div className="hidden md:flex space-x-6">
-          <a 
-            href="/#features" 
+          <button 
+            onClick={() => handleSectionClick('#features')}
             className={`hover:text-appPrimary transition-colors ${
               currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
             }`}
           >
             {t('nav.features')}
-          </a>
-          <a 
-            href="/#security" 
+          </button>
+          <button 
+            onClick={() => handleSectionClick('#security')}
             className={`hover:text-appPrimary transition-colors ${
               currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
             }`}
           >
             {t('nav.security')}
-          </a>
+          </button>
           <a 
             href="/#/how-it-works" 
             className={`hover:text-appPrimary transition-colors ${
@@ -48,14 +58,14 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           >
             {t('nav.howItWorks')}
           </a>
-          <a 
-            href="/#download" 
+          <button 
+            onClick={() => handleSectionClick('#download')}
             className={`hover:text-appPrimary transition-colors ${
               currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
             }`}
           >
             {t('nav.download')}
-          </a>
+          </button>
         </div>
         
         <div className="flex items-center space-x-2">

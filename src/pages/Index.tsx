@@ -1,5 +1,5 @@
-
 import { Shield, MessageSquare, Users, Lock, Smartphone, Github } from "lucide-react";
+import { useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import HeroSection from "@/components/HeroSection";
 import FeatureCard from "@/components/FeatureCard";
@@ -10,6 +10,16 @@ import SecurityFeature from "@/components/SecurityFeature";
 
 const Index = () => {
   const { t } = useLanguage();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
 
   const features = [
     {
@@ -115,8 +125,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <CallToAction />
+      {/* Download Section */}
+      <section id="download" className="py-20 px-4">
+        <CallToAction />
+      </section>
     </PageLayout>
   );
 };

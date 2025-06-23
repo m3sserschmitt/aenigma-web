@@ -194,16 +194,16 @@ const HowItWorks = () => {
       {/* Key Sharing & Privacy */}
       <section className="py-12 px-4 bg-appSurface/30">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {/* Key Sharing */}
-            <div>
-              <div className="flex items-center mb-6">
+            <div className="mb-8">
+              <div className="flex items-center justify-center mb-6">
                 <QrCode className="h-8 w-8 text-appPrimary mr-3" />
                 <h2 className="text-2xl font-bold text-appOnPrimary">
                   {t('howItWorks.sharing.title')}
                 </h2>
               </div>
-              <Card className="bg-appSurface/50 border-appSurfaceHighest">
+              <Card className="bg-appSurface/50 border-appSurfaceHighest max-w-2xl mx-auto">
                 <CardContent className="p-6">
                   <p className="text-appOnBackground text-sm">
                     {t('howItWorks.sharing.description')}
@@ -214,14 +214,14 @@ const HowItWorks = () => {
 
             {/* Privacy Control */}
             <div>
-              <div className="flex items-center mb-6">
+              <div className="flex items-center justify-center mb-6">
                 <Smartphone className="h-8 w-8 text-appPrimary mr-3" />
                 <h2 className="text-2xl font-bold text-appOnPrimary">
                   {t('howItWorks.privacy.title')}
                 </h2>
               </div>
 
-              <div className="space-y-4">
+              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
                 <Card className="bg-appSurface/50 border-appSurfaceHighest">
                   <CardHeader className="pb-3">
                     <CardTitle className="text-appOnPrimary flex items-center text-lg">

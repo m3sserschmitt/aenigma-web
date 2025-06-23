@@ -27,6 +27,13 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
     }
   };
 
+  const handleHowItWorksClick = () => {
+    window.location.href = '/#/how-it-works';
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-appSurface/80 backdrop-blur-sm border-b border-appSurfaceHighest z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -51,14 +58,14 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           >
             {t('nav.security')}
           </button>
-          <a 
-            href="/#/how-it-works" 
+          <button 
+            onClick={handleHowItWorksClick}
             className={`hover:text-appPrimary transition-colors ${
               currentPage === 'how-it-works' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
             }`}
           >
             {t('nav.howItWorks')}
-          </a>
+          </button>
           <button 
             onClick={() => handleSectionClick('#download')}
             className={`hover:text-appPrimary transition-colors ${

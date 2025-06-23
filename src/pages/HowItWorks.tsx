@@ -1,3 +1,4 @@
+
 import { Shield, Lock, Key, FileSignature, QrCode, Smartphone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -66,9 +67,16 @@ const HowItWorks = () => {
                     {t('howItWorks.hybrid.title')}
                   </h2>
                 </div>
-                <p className="text-appOnBackground mb-6 max-w-2xl mx-auto">
-                  {t('howItWorks.protection.description')}
-                </p>
+                <div className="flex justify-center mb-6">
+                  <div className="max-w-2xl">
+                    <FeatureCard
+                      icon={<Shield className="h-8 w-8 text-appPrimary" />}
+                      title="Private Key Protection"
+                      description="Only your private key can open the messages sealed for you — not even we can read them."
+                      delay={0}
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">

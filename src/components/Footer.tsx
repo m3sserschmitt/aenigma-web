@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="py-12 px-4 border-t border-appSurfaceHighest">
       <div className="container mx-auto text-center">
-        <div className="mb-4">
+        <div className="mb-4 flex justify-center">
           <Logo size="md" />
         </div>
         <p className="text-appOnBackground mb-4">

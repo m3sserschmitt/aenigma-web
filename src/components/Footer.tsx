@@ -1,5 +1,6 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
+import Logo from "@/components/Logo";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -7,9 +8,8 @@ const Footer = () => {
   return (
     <footer className="py-12 px-4 border-t border-appSurfaceHighest">
       <div className="container mx-auto text-center">
-        <div className="flex items-center justify-center space-x-2 mb-4">
-          <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-8 w-8" />
-          <span className="text-lg font-semibold text-appOnPrimary">Aenigma</span>
+        <div className="mb-4">
+          <Logo size="md" />
         </div>
         <p className="text-appOnBackground mb-4">
           {t('footer.tagline')}

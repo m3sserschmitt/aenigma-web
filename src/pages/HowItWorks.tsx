@@ -1,58 +1,64 @@
 
-import { Shield, Lock, Key, FileSignature, QrCode, Smartphone } from "lucide-react";
+import { Shield, Lock, Key, FileSignature, QrCode } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
-import Footer from "@/components/Footer";
+import PageLayout from "@/components/PageLayout";
+import SectionTitle from "@/components/SectionTitle";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
 
-  return (
-    <div className="min-h-screen bg-appBackground text-appOnBackground flex flex-col">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-appSurface/80 backdrop-blur-sm border-b border-appSurfaceHighest z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-10 w-10" />
-            <a href="/" className="text-xl font-bold text-appOnPrimary hover:text-appPrimary transition-colors">Aenigma</a>
-          </div>
-          <div className="hidden md:flex space-x-6">
-            <a href="/#features" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.features')}</a>
-            <a href="/#security" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.security')}</a>
-            <a href="/how-it-works" className="text-appPrimary font-medium">{t('nav.howItWorks')}</a>
-            <a href="/#download" className="hover:text-appPrimary transition-colors text-appOnSurface">{t('nav.download')}</a>
-          </div>
-          <div className="flex items-center space-x-2">
-            <LanguageSwitcher />
-            <Button 
-              variant="outline" 
-              className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
-              onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank')}
-            >
-              <Download className="h-4 w-4 mr-2" />
-              {t('nav.getApp')}
-            </Button>
-          </div>
-        </div>
-      </nav>
+  const hybridEncryptionFeatures = [
+    {
+      icon: <Shield className="h-8 w-8 text-appPrimary" />,
+      title: t('howItWorks.aes.title'),
+      description: t('howItWorks.aes.description')
+    },
+    {
+      icon: <Key className="h-8 w-8 text-appPrimary" />,
+      title: t('howItWorks.rsa.title'),
+      description: t('howItWorks.rsa.description')
+    }
+  ];
 
+  const keyFeatures = [
+    {
+      icon: <Key className="h-6 w-6 text-appPrimary" />,
+      title: t('howItWorks.publicKey.title'),
+      description: t('howItWorks.publicKey.description')
+    },
+    {
+      icon: <Lock className="h-6 w-6 text-appPrimary" />,
+      title: t('howItWorks.privateKey.title'),
+      description: t('howItWorks.privateKey.description')
+    }
+  ];
+
+  const signingFeatures = [
+    {
+      icon: <Shield className="h-6 w-6 text-appPrimary" />,
+      title: "Authenticity",
+      description: t('howItWorks.authenticity')
+    },
+    {
+      icon: <Lock className="h-6 w-6 text-appSecondary" />,
+      title: "Integrity",
+      description: t('howItWorks.integrity')
+    }
+  ];
+
+  return (
+    <PageLayout currentPage="how-it-works" className="flex flex-col">
       {/* Main Content Container - Flex */}
       <div className="flex-1 flex flex-col pt-24">
         {/* Hero Section */}
         <section className="flex-shrink-0 pb-12 px-4">
-          <div className="container mx-auto text-center">
-            <div className="flex items-center justify-center mb-4">
-              <Shield className="h-10 w-10 text-appPrimary mr-3" />
-              <h1 className="text-4xl font-bold text-appOnPrimary">
-                {t('howItWorks.title')}
-              </h1>
-            </div>
-            <p className="text-lg text-appOnBackground max-w-3xl mx-auto">
-              {t('howItWorks.subtitle')}
-            </p>
+          <div className="container mx-auto">
+            <SectionTitle
+              icon={<Shield className="h-10 w-10 text-appPrimary" />}
+              title={t('howItWorks.title')}
+              subtitle={t('howItWorks.subtitle')}
+            />
           </div>
         </section>
 
@@ -61,32 +67,23 @@ const HowItWorks = () => {
           {/* Hybrid Encryption & Protection */}
           <section className="flex-shrink-0 py-12 bg-appSurface/30">
             <div className="container mx-auto">
-              <div className="text-center mb-8">
-                <div className="flex items-center justify-center mb-4">
-                  <Lock className="h-8 w-8 text-appPrimary mr-3" />
-                  <h2 className="text-2xl font-bold text-appOnPrimary">
-                    {t('howItWorks.hybrid.title')}
-                  </h2>
-                </div>
-              </div>
+              <SectionTitle
+                icon={<Lock className="h-8 w-8 text-appPrimary" />}
+                title={t('howItWorks.hybrid.title')}
+                className="mb-8"
+              />
 
               <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
-                <div className="flex-1 min-w-[300px]">
-                  <FeatureCard
-                    icon={<Shield className="h-8 w-8 text-appPrimary" />}
-                    title={t('howItWorks.aes.title')}
-                    description={t('howItWorks.aes.description')}
-                    delay={0}
-                  />
-                </div>
-                <div className="flex-1 min-w-[300px]">
-                  <FeatureCard
-                    icon={<Key className="h-8 w-8 text-appPrimary" />}
-                    title={t('howItWorks.rsa.title')}
-                    description={t('howItWorks.rsa.description')}
-                    delay={0.1}
-                  />
-                </div>
+                {hybridEncryptionFeatures.map((feature, index) => (
+                  <div key={index} className="flex-1 min-w-[300px]">
+                    <FeatureCard
+                      icon={feature.icon}
+                      title={feature.title}
+                      description={feature.description}
+                      delay={index * 0.1}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </section>
@@ -103,18 +100,15 @@ const HowItWorks = () => {
                   </h2>
                   
                   <div className="flex flex-col gap-6 mb-6">
-                    <FeatureCard
-                      icon={<Key className="h-6 w-6 text-appPrimary" />}
-                      title={t('howItWorks.publicKey.title')}
-                      description={t('howItWorks.publicKey.description')}
-                      delay={0}
-                    />
-                    <FeatureCard
-                      icon={<Lock className="h-6 w-6 text-appPrimary" />}
-                      title={t('howItWorks.privateKey.title')}
-                      description={t('howItWorks.privateKey.description')}
-                      delay={0.1}
-                    />
+                    {keyFeatures.map((feature, index) => (
+                      <FeatureCard
+                        key={index}
+                        icon={feature.icon}
+                        title={feature.title}
+                        description={feature.description}
+                        delay={index * 0.1}
+                      />
+                    ))}
                   </div>
                 </div>
 
@@ -130,18 +124,15 @@ const HowItWorks = () => {
                   </p>
 
                   <div className="flex flex-col gap-6">
-                    <FeatureCard
-                      icon={<Shield className="h-6 w-6 text-appPrimary" />}
-                      title="Authenticity"
-                      description={t('howItWorks.authenticity')}
-                      delay={0}
-                    />
-                    <FeatureCard
-                      icon={<Lock className="h-6 w-6 text-appSecondary" />}
-                      title="Integrity"
-                      description={t('howItWorks.integrity')}
-                      delay={0.1}
-                    />
+                    {signingFeatures.map((feature, index) => (
+                      <FeatureCard
+                        key={index}
+                        icon={feature.icon}
+                        title={feature.title}
+                        description={feature.description}
+                        delay={index * 0.1}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -152,34 +143,27 @@ const HowItWorks = () => {
           <section className="flex-shrink-0 py-12 bg-appSurface/30">
             <div className="container mx-auto">
               <div className="max-w-6xl mx-auto">
-                {/* Key Sharing */}
-                <div className="mb-12">
-                  <div className="flex items-center justify-center mb-8">
-                    <QrCode className="h-8 w-8 text-appPrimary mr-3" />
-                    <h2 className="text-2xl font-bold text-appOnPrimary">
-                      {t('howItWorks.sharing.title')}
-                    </h2>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="max-w-2xl">
-                      <FeatureCard
-                        icon={<QrCode className="h-8 w-8 text-appPrimary" />}
-                        title={t('howItWorks.sharing.title')}
-                        description={t('howItWorks.sharing.description')}
-                        delay={0}
-                      />
-                    </div>
+                <SectionTitle
+                  icon={<QrCode className="h-8 w-8 text-appPrimary" />}
+                  title={t('howItWorks.sharing.title')}
+                  className="mb-8"
+                />
+                <div className="flex justify-center">
+                  <div className="max-w-2xl">
+                    <FeatureCard
+                      icon={<QrCode className="h-8 w-8 text-appPrimary" />}
+                      title={t('howItWorks.sharing.title')}
+                      description={t('howItWorks.sharing.description')}
+                      delay={0}
+                    />
                   </div>
                 </div>
               </div>
             </div>
           </section>
         </div>
-
-        {/* Footer */}
-        <Footer />
       </div>
-    </div>
+    </PageLayout>
   );
 };
 

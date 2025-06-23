@@ -5,6 +5,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
+import Footer from "@/components/Footer";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
@@ -176,28 +177,7 @@ const HowItWorks = () => {
         </div>
 
         {/* Footer */}
-        <footer className="flex-shrink-0 py-8 px-4 border-t border-appSurfaceHighest">
-          <div className="container mx-auto text-center">
-            <div className="flex items-center justify-center space-x-2 mb-3">
-              <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-6 w-6" />
-              <span className="text-lg font-semibold text-appOnPrimary">Aenigma</span>
-            </div>
-            <p className="text-appOnBackground mb-3 text-sm">
-              {t('footer.tagline')}
-            </p>
-            <div className="flex justify-center space-x-6 text-sm text-appOnBackground">
-              <a href="/#privacy" className="hover:text-appOnPrimary transition-colors">{t('footer.privacyPolicy')}</a>
-              <a href="https://github.com/m3sserschmitt/aenigma-android" target="_blank" rel="noopener noreferrer" className="hover:text-appOnPrimary transition-colors">{t('footer.sourceCode')}</a>
-            </div>
-            <p className="text-appSecondary text-xs mt-3">
-              {t('footer.copyright')}
-            </p>
-            
-            <p className="text-appSecondary text-xs mt-2">
-              Made with ❤️ in Romania
-            </p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ export const enTranslations = {
   
   // Hero Section
   'hero.title1': 'Take a stand against',
-  'hero.title2': 'big tech surveillance',
+  'hero.title2': 'big tech hegemony',
   'hero.subtitle': 'Democracy is also built by the means of information technology - from letters and newspapers to modern telecommunications. Liberty will flourish only when people are free to exchange ideas.',
   'hero.downloadButton': 'Download for Android',
   'hero.githubButton': 'View source code',

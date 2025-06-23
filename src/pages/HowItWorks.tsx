@@ -1,4 +1,3 @@
-
 import { Shield, Lock, Key, FileSignature, QrCode, Smartphone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -163,7 +162,7 @@ const HowItWorks = () => {
             </div>
           </section>
 
-          {/* Key Sharing & Privacy */}
+          {/* Key Sharing */}
           <section className="flex-shrink-0 py-12 bg-appSurface/30">
             <div className="container mx-auto">
               <div className="max-w-6xl mx-auto">
@@ -182,43 +181,6 @@ const HowItWorks = () => {
                         title={t('howItWorks.sharing.title')}
                         description={t('howItWorks.sharing.description')}
                         delay={0}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Privacy Control */}
-                <div>
-                  <div className="flex items-center justify-center mb-8">
-                    <Smartphone className="h-8 w-8 text-appPrimary mr-3" />
-                    <h2 className="text-2xl font-bold text-appOnPrimary">
-                      {t('howItWorks.privacy.title')}
-                    </h2>
-                  </div>
-
-                  <div className="flex flex-wrap justify-center gap-6">
-                    <div className="flex-1 min-w-[250px] max-w-[350px]">
-                      <FeatureCard
-                        icon={<Shield className="h-8 w-8 text-appPrimary" />}
-                        title="Device Security"
-                        description={t('howItWorks.privacy.point1')}
-                        delay={0}
-                      />
-                    </div>
-                    <div className="flex-1 min-w-[250px] max-w-[350px]">
-                      <FeatureCard
-                        icon={<Lock className="h-8 w-8 text-appSecondary" />}
-                        title="Zero Access"
-                        description={t('howItWorks.privacy.point2')}
-                        delay={0.1}
-                      />
-                    </div>
-                    <div className="flex-1 min-w-[250px] max-w-[350px]">
-                      <FeatureCard
-                        icon={<FileSignature className="h-8 w-8 text-appPrimary" />}
-                        title="End-to-End Protection"
-                        description={t('howItWorks.privacy.point3')}
-                        delay={0.2}
                       />
                     </div>
                   </div>

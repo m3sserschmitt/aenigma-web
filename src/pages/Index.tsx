@@ -181,6 +181,10 @@ const Index = () => {
           <p className="text-appSecondary text-sm mt-4">
             {t('footer.copyright')}
           </p>
+          
+          <p className="text-appSecondary text-sm mt-2">
+            Made with ❤️ in Romania
+          </p>
         </div>
       </footer>
     </div>

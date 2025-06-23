@@ -17,7 +17,11 @@ const LanguageSwitcher = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="text-appOnSurface hover:text-appPrimary">
-          <Globe className="h-4 w-4 mr-2" />
+          <img 
+            src={language === 'en' ? '/flags/england.png' : '/flags/romania.png'} 
+            alt={language === 'en' ? 'English' : 'Română'} 
+            className="h-4 w-6 mr-2 object-cover" 
+          />
           {language === 'en' ? 'EN' : 'RO'}
         </Button>
       </DropdownMenuTrigger>

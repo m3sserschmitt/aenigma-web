@@ -1,10 +1,10 @@
 
 import { Shield, Lock, Key, FileSignature, QrCode, Smartphone } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import FeatureCard from "@/components/FeatureCard";
 
 const HowItWorks = () => {
   const { t } = useLanguage();
@@ -68,34 +68,19 @@ const HowItWorks = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <Card className="bg-appSurface/50 border-appSurfaceHighest">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-appOnPrimary flex items-center text-lg">
-                  <Shield className="h-5 w-5 text-appPrimary mr-2" />
-                  {t('howItWorks.aes.title')}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-appOnBackground text-sm">
-                  {t('howItWorks.aes.description')}
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-appSurface/50 border-appSurfaceHighest">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-appOnPrimary flex items-center text-lg">
-                  <Key className="h-5 w-5 text-appPrimary mr-2" />
-                  {t('howItWorks.rsa.title')}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <p className="text-appOnBackground text-sm">
-                  {t('howItWorks.rsa.description')}
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <FeatureCard
+              icon={<Shield className="h-8 w-8 text-appPrimary" />}
+              title={t('howItWorks.aes.title')}
+              description={t('howItWorks.aes.description')}
+              delay={0}
+            />
+            <FeatureCard
+              icon={<Key className="h-8 w-8 text-appPrimary" />}
+              title={t('howItWorks.rsa.title')}
+              description={t('howItWorks.rsa.description')}
+              delay={0.1}
+            />
           </div>
         </div>
       </section>
@@ -103,40 +88,27 @@ const HowItWorks = () => {
       {/* Keys & Signing */}
       <section className="py-12 px-4">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Keys Section */}
             <div>
-              <h2 className="text-2xl font-bold mb-6 text-appOnPrimary flex items-center">
+              <h2 className="text-2xl font-bold mb-6 text-appOnPrimary flex items-center justify-center lg:justify-start">
                 <Key className="h-6 w-6 text-appPrimary mr-2" />
                 {t('howItWorks.keys.title')}
               </h2>
               
-              <div className="space-y-4 mb-4">
-                <Card className="bg-appSurface/50 border-appSurfaceHighest">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-appOnPrimary text-lg">
-                      {t('howItWorks.publicKey.title')}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-appOnBackground text-sm">
-                      {t('howItWorks.publicKey.description')}
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-appSurface/50 border-appSurfaceHighest">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-appOnPrimary text-lg">
-                      {t('howItWorks.privateKey.title')}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-appOnBackground text-sm">
-                      {t('howItWorks.privateKey.description')}
-                    </p>
-                  </CardContent>
-                </Card>
+              <div className="grid gap-6 mb-6">
+                <FeatureCard
+                  icon={<Key className="h-6 w-6 text-appPrimary" />}
+                  title={t('howItWorks.publicKey.title')}
+                  description={t('howItWorks.publicKey.description')}
+                  delay={0}
+                />
+                <FeatureCard
+                  icon={<Lock className="h-6 w-6 text-appSecondary" />}
+                  title={t('howItWorks.privateKey.title')}
+                  description={t('howItWorks.privateKey.description')}
+                  delay={0.1}
+                />
               </div>
 
               <div className="bg-appPrimary/10 p-4 rounded-lg border border-appPrimary/30">
@@ -148,43 +120,28 @@ const HowItWorks = () => {
 
             {/* Message Signing Section */}
             <div>
-              <h2 className="text-2xl font-bold mb-6 text-appOnPrimary flex items-center">
+              <h2 className="text-2xl font-bold mb-6 text-appOnPrimary flex items-center justify-center lg:justify-start">
                 <FileSignature className="h-6 w-6 text-appPrimary mr-2" />
                 {t('howItWorks.signing.title')}
               </h2>
               
-              <p className="text-appOnBackground mb-6 text-sm">
+              <p className="text-appOnBackground mb-6 text-sm text-center lg:text-left">
                 {t('howItWorks.signing.description')}
               </p>
 
-              <div className="space-y-4 mb-6">
-                <Card className="bg-appSurface/50 border-appSurfaceHighest">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
-                      <Shield className="h-5 w-5 text-appPrimary mr-2" />
-                      Authenticity
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-appOnBackground text-sm">
-                      {t('howItWorks.authenticity')}
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-appSurface/50 border-appSurfaceHighest">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
-                      <Lock className="h-5 w-5 text-appSecondary mr-2" />
-                      Integrity
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-appOnBackground text-sm">
-                      {t('howItWorks.integrity')}
-                    </p>
-                  </CardContent>
-                </Card>
+              <div className="grid gap-6">
+                <FeatureCard
+                  icon={<Shield className="h-6 w-6 text-appPrimary" />}
+                  title="Authenticity"
+                  description={t('howItWorks.authenticity')}
+                  delay={0}
+                />
+                <FeatureCard
+                  icon={<Lock className="h-6 w-6 text-appSecondary" />}
+                  title="Integrity"
+                  description={t('howItWorks.integrity')}
+                  delay={0.1}
+                />
               </div>
             </div>
           </div>
@@ -196,73 +153,51 @@ const HowItWorks = () => {
         <div className="container mx-auto">
           <div className="max-w-6xl mx-auto">
             {/* Key Sharing */}
-            <div className="mb-8">
-              <div className="flex items-center justify-center mb-6">
+            <div className="mb-12">
+              <div className="flex items-center justify-center mb-8">
                 <QrCode className="h-8 w-8 text-appPrimary mr-3" />
                 <h2 className="text-2xl font-bold text-appOnPrimary">
                   {t('howItWorks.sharing.title')}
                 </h2>
               </div>
-              <Card className="bg-appSurface/50 border-appSurfaceHighest max-w-2xl mx-auto">
-                <CardContent className="p-6">
-                  <p className="text-appOnBackground text-sm">
-                    {t('howItWorks.sharing.description')}
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="max-w-2xl mx-auto">
+                <FeatureCard
+                  icon={<QrCode className="h-8 w-8 text-appPrimary" />}
+                  title={t('howItWorks.sharing.title')}
+                  description={t('howItWorks.sharing.description')}
+                  delay={0}
+                />
+              </div>
             </div>
 
             {/* Privacy Control */}
             <div>
-              <div className="flex items-center justify-center mb-6">
+              <div className="flex items-center justify-center mb-8">
                 <Smartphone className="h-8 w-8 text-appPrimary mr-3" />
                 <h2 className="text-2xl font-bold text-appOnPrimary">
                   {t('howItWorks.privacy.title')}
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-                <Card className="bg-appSurface/50 border-appSurfaceHighest">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
-                      <Shield className="h-5 w-5 text-appPrimary mr-2" />
-                      Device Security
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-appOnBackground text-sm">
-                      {t('howItWorks.privacy.point1')}
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-appSurface/50 border-appSurfaceHighest">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
-                      <Lock className="h-5 w-5 text-appSecondary mr-2" />
-                      Zero Access
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-appOnBackground text-sm">
-                      {t('howItWorks.privacy.point2')}
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-appSurface/50 border-appSurfaceHighest">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
-                      <FileSignature className="h-5 w-5 text-appPrimary mr-2" />
-                      End-to-End Protection
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-appOnBackground text-sm">
-                      {t('howItWorks.privacy.point3')}
-                    </p>
-                  </CardContent>
-                </Card>
+              <div className="grid md:grid-cols-3 gap-6">
+                <FeatureCard
+                  icon={<Shield className="h-8 w-8 text-appPrimary" />}
+                  title="Device Security"
+                  description={t('howItWorks.privacy.point1')}
+                  delay={0}
+                />
+                <FeatureCard
+                  icon={<Lock className="h-8 w-8 text-appSecondary" />}
+                  title="Zero Access"
+                  description={t('howItWorks.privacy.point2')}
+                  delay={0.1}
+                />
+                <FeatureCard
+                  icon={<FileSignature className="h-8 w-8 text-appPrimary" />}
+                  title="End-to-End Protection"
+                  description={t('howItWorks.privacy.point3')}
+                  delay={0.2}
+                />
               </div>
             </div>
           </div>

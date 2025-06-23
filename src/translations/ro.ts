@@ -54,7 +54,7 @@ export const roTranslations = {
   'howItWorks.aes.title': 'AES-256-GCM',
   'howItWorks.aes.description': 'Un algoritm de criptare rapid și sigur care protejează fiecare mesaj folosind o cheie unică, generată aleatoriu. De asemenea, oferă autentificare încorporată, astfel încât să știți că mesajul nu a fost modificat. Este ca și cum ai pune scrisoarea în plic.',
   'howItWorks.rsa.title': 'RSA 4096',
-  'howItWorks.rsa.description': 'Un sistem de cheie publică extrem de puternic de 4096 de biți folosit pentru a "sigila" cheia AES în plic. Acum plicul a fost sigilat și doar destinatarul citi scrisoarea.',
+  'howItWorks.rsa.description': 'Un sistem de cheie publică extrem de puternic de 4096 de biți folosit pentru a "sigila" cheia AES în plic. Acum plicul a fost sigilat și doar destinatarul poate citi scrisoarea.',
   'howItWorks.keys.title': 'Cheile publice și private: la ce se folosesc?',
   'howItWorks.publicKey.title': 'Cheia publică (partajată)',
   'howItWorks.publicKey.description': 'Aceasta este ca adresa ta sigură de corespondență. O poți partaja liber (prin cod QR sau link sigur) astfel încât alții să îți poată trimite mesaje criptate.',

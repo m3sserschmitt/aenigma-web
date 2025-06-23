@@ -31,8 +31,9 @@ const Footer = () => {
           {t('footer.copyright')}
         </p>
         
-        <p className="text-appSecondary text-sm mt-2">
+        <p className="text-appSecondary text-sm mt-2 flex items-center justify-center">
           {t('footer.madeWithLove')}
+          <img src="/flags/romania.png" alt="Romania" className="h-4 w-6 ml-2 object-cover" />
         </p>
       </div>
     </footer>

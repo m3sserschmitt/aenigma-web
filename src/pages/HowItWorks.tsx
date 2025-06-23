@@ -108,17 +108,11 @@ const HowItWorks = () => {
                       delay={0}
                     />
                     <FeatureCard
-                      icon={<Lock className="h-6 w-6 text-appSecondary" />}
+                      icon={<Lock className="h-6 w-6 text-appPrimary" />}
                       title={t('howItWorks.privateKey.title')}
                       description={t('howItWorks.privateKey.description')}
                       delay={0.1}
                     />
-                  </div>
-
-                  <div className="bg-appPrimary/10 p-4 rounded-lg border border-appPrimary/30">
-                    <p className="text-appOnPrimary text-sm font-medium">
-                      {t('howItWorks.keysNote')}
-                    </p>
                   </div>
                 </div>
 

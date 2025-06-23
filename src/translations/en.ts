@@ -88,4 +88,5 @@ export const enTranslations = {
   'footer.privacyTitle': 'Privacy policy',
   'footer.privacyText': 'Aenigma does not collect, store, or process any personal information about its users. Your communications are end-to-end encrypted and routed through the TOR network for complete anonymity. We cannot and will not access your messages, contacts, or any other personal data.',
   'footer.copyright': '© 2025 Aenigma. Open source and auditable.',
+  'footer.madeWithLove': 'Made with ❤️ in Romania',
 };

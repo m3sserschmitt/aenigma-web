@@ -88,6 +88,7 @@ export const roTranslations = {
   'footer.privacyTitle': 'Politica de confidențialitate',
   'footer.privacyText': 'Aenigma nu colectează, nu stochează și nu procesează nicio informație personală despre utilizatorii săi. Comunicațiile tale sunt criptate de la un capăt la altul și rutate prin rețeaua TOR pentru anonimat complet. Nu putem și nu vom accesa mesajele tale, contactele sau alte date personale.',
   'footer.copyright': '© 2025 Aenigma. Sursă deschisă și auditabil.',
+  'footer.madeWithLove': 'Făcut cu ❤️ în România',
 
   // Encryption Flow
   'encryptionFlow.title': 'Cum funcționează criptarea: metoda plicului',

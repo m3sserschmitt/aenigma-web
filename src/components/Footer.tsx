@@ -32,7 +32,7 @@ const Footer = () => {
         </p>
         
         <p className="text-appSecondary text-sm mt-2">
-          Made with ❤️ in Romania
+          {t('footer.madeWithLove')}
         </p>
       </div>
     </footer>

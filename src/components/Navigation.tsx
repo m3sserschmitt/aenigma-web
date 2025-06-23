@@ -41,7 +41,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
             {t('nav.security')}
           </a>
           <a 
-            href="/how-it-works" 
+            href="/#/how-it-works" 
             className={`hover:text-appPrimary transition-colors ${
               currentPage === 'how-it-works' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
             }`}

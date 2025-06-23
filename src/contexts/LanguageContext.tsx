@@ -1,4 +1,3 @@
-
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Language, LanguageContextType } from '@/types/language';
 import { translations } from '@/translations';
@@ -10,7 +9,7 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguageState] = useState<Language>('en');
+  const [language, setLanguageState] = useState<Language>('ro');
 
   // Load language from localStorage on mount
   useEffect(() => {

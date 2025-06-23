@@ -9,7 +9,7 @@ export const roTranslations = {
   
   // Hero Section
   'hero.title1': 'Luptă împotriva',
-  'hero.title2': 'hegemoniei big tech',
+  'hero.title2': 'hegemoniei Big Tech',
   'hero.subtitle': 'Democrația se construiește și prin mijloacele tehnologiei informației - de la scrisori și ziare la telecomunicațiile moderne. Libertatea va înflori doar când oamenii sunt liberi să facă schimb de idei.',
   'hero.downloadButton': 'Descarcă pentru Android',
   'hero.githubButton': 'Vezi codul sursă',

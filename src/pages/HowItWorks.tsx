@@ -1,3 +1,4 @@
+
 import { Shield, Lock, Key, FileSignature, QrCode, Smartphone } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -111,8 +112,8 @@ const HowItWorks = () => {
               </h2>
               
               <div className="space-y-4 mb-4">
-                <Card className="bg-gradient-to-br from-appPrimary/20 to-appSecondary/20 border-appPrimary/30">
-                  <CardHeader className="pb-2">
+                <Card className="bg-appSurface/50 border-appSurfaceHighest">
+                  <CardHeader className="pb-3">
                     <CardTitle className="text-appOnPrimary text-lg">
                       {t('howItWorks.publicKey.title')}
                     </CardTitle>
@@ -124,8 +125,8 @@ const HowItWorks = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="bg-gradient-to-br from-appSecondary/20 to-appPrimary/20 border-appSecondary/30">
-                  <CardHeader className="pb-2">
+                <Card className="bg-appSurface/50 border-appSurfaceHighest">
+                  <CardHeader className="pb-3">
                     <CardTitle className="text-appOnPrimary text-lg">
                       {t('howItWorks.privateKey.title')}
                     </CardTitle>
@@ -157,29 +158,33 @@ const HowItWorks = () => {
               </p>
 
               <div className="space-y-4 mb-6">
-                <div className="bg-appSurface/50 p-4 rounded-lg border border-appSurfaceHighest">
-                  <div className="flex items-center mb-2">
-                    <div className="bg-appPrimary/20 p-2 rounded-lg mr-3">
-                      <Shield className="h-4 w-4 text-appPrimary" />
-                    </div>
-                    <h3 className="font-semibold text-appOnPrimary text-sm">Authenticity</h3>
-                  </div>
-                  <p className="text-appOnBackground text-xs">
-                    {t('howItWorks.authenticity')}
-                  </p>
-                </div>
+                <Card className="bg-appSurface/50 border-appSurfaceHighest">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
+                      <Shield className="h-5 w-5 text-appPrimary mr-2" />
+                      Authenticity
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-appOnBackground text-sm">
+                      {t('howItWorks.authenticity')}
+                    </p>
+                  </CardContent>
+                </Card>
 
-                <div className="bg-appSurface/50 p-4 rounded-lg border border-appSurfaceHighest">
-                  <div className="flex items-center mb-2">
-                    <div className="bg-appSecondary/20 p-2 rounded-lg mr-3">
-                      <Lock className="h-4 w-4 text-appSecondary" />
-                    </div>
-                    <h3 className="font-semibold text-appOnPrimary text-sm">Integrity</h3>
-                  </div>
-                  <p className="text-appOnBackground text-xs">
-                    {t('howItWorks.integrity')}
-                  </p>
-                </div>
+                <Card className="bg-appSurface/50 border-appSurfaceHighest">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
+                      <Lock className="h-5 w-5 text-appSecondary mr-2" />
+                      Integrity
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-appOnBackground text-sm">
+                      {t('howItWorks.integrity')}
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -191,54 +196,73 @@ const HowItWorks = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Key Sharing */}
-            <div className="text-center">
-              <div className="flex items-center justify-center mb-4">
+            <div>
+              <div className="flex items-center mb-6">
                 <QrCode className="h-8 w-8 text-appPrimary mr-3" />
                 <h2 className="text-2xl font-bold text-appOnPrimary">
                   {t('howItWorks.sharing.title')}
                 </h2>
               </div>
-              <p className="text-appOnBackground">
-                {t('howItWorks.sharing.description')}
-              </p>
+              <Card className="bg-appSurface/50 border-appSurfaceHighest">
+                <CardContent className="p-6">
+                  <p className="text-appOnBackground text-sm">
+                    {t('howItWorks.sharing.description')}
+                  </p>
+                </CardContent>
+              </Card>
             </div>
 
             {/* Privacy Control */}
             <div>
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-6">
                 <Smartphone className="h-8 w-8 text-appPrimary mr-3" />
                 <h2 className="text-2xl font-bold text-appOnPrimary">
                   {t('howItWorks.privacy.title')}
                 </h2>
               </div>
 
-              <div className="space-y-3">
-                <div className="flex items-start">
-                  <div className="bg-appPrimary/20 p-1.5 rounded-lg mr-3 mt-0.5">
-                    <Shield className="h-4 w-4 text-appPrimary" />
-                  </div>
-                  <p className="text-appOnBackground text-sm">
-                    {t('howItWorks.privacy.point1')}
-                  </p>
-                </div>
+              <div className="space-y-4">
+                <Card className="bg-appSurface/50 border-appSurfaceHighest">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
+                      <Shield className="h-5 w-5 text-appPrimary mr-2" />
+                      Device Security
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-appOnBackground text-sm">
+                      {t('howItWorks.privacy.point1')}
+                    </p>
+                  </CardContent>
+                </Card>
 
-                <div className="flex items-start">
-                  <div className="bg-appSecondary/20 p-1.5 rounded-lg mr-3 mt-0.5">
-                    <Lock className="h-4 w-4 text-appSecondary" />
-                  </div>
-                  <p className="text-appOnBackground text-sm">
-                    {t('howItWorks.privacy.point2')}
-                  </p>
-                </div>
+                <Card className="bg-appSurface/50 border-appSurfaceHighest">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
+                      <Lock className="h-5 w-5 text-appSecondary mr-2" />
+                      Zero Access
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-appOnBackground text-sm">
+                      {t('howItWorks.privacy.point2')}
+                    </p>
+                  </CardContent>
+                </Card>
 
-                <div className="flex items-start">
-                  <div className="bg-appPrimary/20 p-1.5 rounded-lg mr-3 mt-0.5">
-                    <FileSignature className="h-4 w-4 text-appPrimary" />
-                  </div>
-                  <p className="text-appOnBackground text-sm">
-                    {t('howItWorks.privacy.point3')}
-                  </p>
-                </div>
+                <Card className="bg-appSurface/50 border-appSurfaceHighest">
+                  <CardHeader className="pb-3">
+                    <CardTitle className="text-appOnPrimary flex items-center text-lg">
+                      <FileSignature className="h-5 w-5 text-appPrimary mr-2" />
+                      End-to-End Protection
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-appOnBackground text-sm">
+                      {t('howItWorks.privacy.point3')}
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>

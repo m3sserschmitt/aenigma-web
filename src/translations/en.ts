@@ -54,7 +54,7 @@ export const enTranslations = {
   'howItWorks.aes.title': 'AES-256-GCM',
   'howItWorks.aes.description': 'A fast, secure encryption algorithm that locks each message using a unique, randomly generated key. It also provides built-in authentication, so you know the message hasn\'t been tampered with. This is like putting the letter into the envelope.',
   'howItWorks.rsa.title': 'RSA 4096',
-  'howItWorks.rsa.description': 'An extremely strong 4096 bits public-key system used to "seal" the AES key into the envelope. Now the envelope was sealed and only the recipient can open the envelope.',
+  'howItWorks.rsa.description': 'An extremely strong 4096 bits public-key system used to "seal" the AES key into the envelope. Now the envelope was sealed and only the recipient can see the letter.',
   'howItWorks.keys.title': 'Public and private keys: what they do?',
   'howItWorks.publicKey.title': 'Public key (shared)',
   'howItWorks.publicKey.description': 'This is like your secure mailing address. You can share it freely (through a QR code or secure link) so others can send you encrypted messages.',

@@ -52,7 +52,7 @@ export const roTranslations = {
   'howItWorks.hybrid.title': 'Criptarea hibridă: cel e mai bun din ambele lumi',
   'howItWorks.hybrid.description': 'Combinăm două tipuri de criptare:',
   'howItWorks.aes.title': 'AES-256-GCM',
-  'howItWorks.aes.description': 'Un algoritm de criptare rapid și sigur care blochează fiecare mesaj folosind o cheie unică, generată aleatoriu. De asemenea, oferă autentificare încorporată, astfel încât să știți că mesajul nu a fost modificat. Este ca și cum ai pune scrisoarea în plic.',
+  'howItWorks.aes.description': 'Un algoritm de criptare rapid și sigur care protejează fiecare mesaj folosind o cheie unică, generată aleatoriu. De asemenea, oferă autentificare încorporată, astfel încât să știți că mesajul nu a fost modificat. Este ca și cum ai pune scrisoarea în plic.',
   'howItWorks.rsa.title': 'RSA 4096',
   'howItWorks.rsa.description': 'Un sistem de cheie publică extrem de puternic de 4096 de biți folosit pentru a "sigila" cheia AES în plic. Acum plicul a fost sigilat și doar destinatarul poate deschide plicul.',
   'howItWorks.keys.title': 'Cheile publice și private: la ce se folosesc?',

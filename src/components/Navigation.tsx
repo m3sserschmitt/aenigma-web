@@ -17,7 +17,14 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
   };
 
   const handleSectionClick = (sectionId: string) => {
-    window.location.href = '/';
+    if (currentPage === 'index') {Add commentMore actions
+      const element = document.querySelector(sectionId);Add commentMore actions
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = `/`;
+    }
     // Scroll will be handled by the useEffect in Index.tsx
   };
 

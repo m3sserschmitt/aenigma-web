@@ -32,7 +32,7 @@ export const roTranslations = {
   'features.zeroKnowledge.description': 'Nimeni nu poate citi mesajele tale chiar dacă ar vrea. Intimitate adevărată prin design.',
   'features.android.title': 'Performanță nativă Android',
   'features.android.description': 'Optimizat pentru dispozitivele Android cu utilizarea eficientă a bateriei și integrarea perfectă cu funcțiile de securitate ale dispozitivului.',
-  'features.openSource.title': 'Transparența sursă deschisă',
+  'features.openSource.title': 'Transparența sursei deschise',
   'features.openSource.description': 'Cod sursă deschis ce poate fi auditat în egală măsură de experți în securitate și comunitate.',
   
   // Security Section

@@ -1,3 +1,4 @@
+
 import { Shield, Lock, Key, FileSignature, QrCode, Smartphone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -190,6 +191,10 @@ const HowItWorks = () => {
             </div>
             <p className="text-appSecondary text-xs mt-3">
               {t('footer.copyright')}
+            </p>
+            
+            <p className="text-appSecondary text-xs mt-2">
+              Made with ❤️ in Romania
             </p>
           </div>
         </footer>

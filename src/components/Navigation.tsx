@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Download, Menu } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -48,14 +49,14 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
     <nav className="fixed top-0 w-full bg-appSurface/80 backdrop-blur-sm border-b border-appSurfaceHighest z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <Logo size="md" />
+          <Logo size="sm" />
         </div>
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
           <button 
             onClick={() => handleSectionClick('#features')}
-            className={`hover:text-appPrimary transition-colors ${
+            className={`text-sm hover:text-appPrimary transition-colors ${
               currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
             }`}
           >
@@ -63,7 +64,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           </button>
           <button 
             onClick={() => handleSectionClick('#security')}
-            className={`hover:text-appPrimary transition-colors ${
+            className={`text-sm hover:text-appPrimary transition-colors ${
               currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
             }`}
           >
@@ -71,7 +72,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           </button>
           <button 
             onClick={handleHowItWorksClick}
-            className={`hover:text-appPrimary transition-colors ${
+            className={`text-sm hover:text-appPrimary transition-colors ${
               currentPage === 'how-it-works' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
             }`}
           >
@@ -79,7 +80,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           </button>
           <button 
             onClick={() => handleSectionClick('#download')}
-            className={`hover:text-appPrimary transition-colors ${
+            className={`text-sm hover:text-appPrimary transition-colors ${
               currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
             }`}
           >
@@ -93,7 +94,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           <Button 
             variant="outline" 
             size="sm"
-            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
+            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary text-xs"
             onClick={handleDownload}
           >
             <Download className="h-4 w-4 mr-2" />
@@ -127,19 +128,19 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
               <div className="flex flex-col space-y-4 mt-6">
                 <button 
                   onClick={() => handleSectionClick('#features')}
-                  className="text-left text-appOnSurface hover:text-appPrimary transition-colors py-2"
+                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
                 >
                   {t('nav.features')}
                 </button>
                 <button 
                   onClick={() => handleSectionClick('#security')}
-                  className="text-left text-appOnSurface hover:text-appPrimary transition-colors py-2"
+                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
                 >
                   {t('nav.security')}
                 </button>
                 <button 
                   onClick={handleHowItWorksClick}
-                  className={`text-left hover:text-appPrimary transition-colors py-2 ${
+                  className={`text-left text-sm hover:text-appPrimary transition-colors py-2 ${
                     currentPage === 'how-it-works' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
                   }`}
                 >
@@ -147,7 +148,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
                 </button>
                 <button 
                   onClick={() => handleSectionClick('#download')}
-                  className="text-left text-appOnSurface hover:text-appPrimary transition-colors py-2"
+                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
                 >
                   {t('nav.download')}
                 </button>

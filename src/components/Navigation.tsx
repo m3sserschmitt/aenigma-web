@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Download, Menu } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -105,6 +104,14 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
         {/* Mobile Controls */}
         <div className="flex md:hidden items-center space-x-2">
           <LanguageSwitcher />
+          <Button 
+            variant="outline" 
+            size="sm"
+            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
+            onClick={handleDownload}
+          >
+            <Download className="h-4 w-4" />
+          </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="sm" className="text-appOnSurface">
@@ -144,17 +151,6 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
                 >
                   {t('nav.download')}
                 </button>
-                <div className="pt-4 border-t border-appSurfaceHighest">
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="w-full border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
-                    onClick={handleDownload}
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    {t('nav.getApp')}
-                  </Button>
-                </div>
               </div>
             </SheetContent>
           </Sheet>

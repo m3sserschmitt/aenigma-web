@@ -1,4 +1,5 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Download, Menu } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -94,11 +95,10 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           <Button 
             variant="outline" 
             size="sm"
-            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary text-xs"
+            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
             onClick={handleDownload}
           >
-            <Download className="h-4 w-4 mr-2" />
-            {t('nav.getApp')}
+            <Download className="h-4 w-4" />
           </Button>
         </div>
 
@@ -162,3 +162,4 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
 };
 
 export default Navigation;
+

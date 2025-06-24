@@ -26,7 +26,7 @@ const Logo = ({ size = 'md', showText = true, className = '' }: LogoProps) => {
         className={sizeClasses[size]} 
       />
       {showText && (
-        <span className={`${textSizeClasses[size]} font-bold text-appOnPrimary`}>
+        <span className={`${textSizeClasses[size]} font-bold text-appOnPrimary hidden sm:inline`}>
           Aenigma
         </span>
       )}

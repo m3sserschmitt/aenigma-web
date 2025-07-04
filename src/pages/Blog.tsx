@@ -98,7 +98,7 @@ const Blog = () => {
       </div>
 
       <Dialog open={isModalOpen} onOpenChange={handleCloseModal}>
-        <DialogContent className="max-w-6xl w-[95vw] h-[90vh] p-0 bg-appSurface flex flex-col">
+        <DialogContent className="max-w-6xl w-[95vw] h-[90vh] p-0 bg-appSurface flex flex-col border-0">
           <DialogHeader className="p-4 pb-2 shrink-0">
             <DialogTitle className="text-appOnSurface">
               {selectedArticle?.title}

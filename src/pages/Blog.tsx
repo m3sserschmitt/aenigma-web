@@ -98,7 +98,7 @@ const Blog = () => {
       </div>
 
       <Dialog open={isModalOpen} onOpenChange={handleCloseModal}>
-        <DialogContent className="max-w-6xl w-[95vw] h-[90vh] p-0 bg-appSurface flex flex-col border-0">
+        <DialogContent className="max-w-6xl w-[95vw] h-[90vh] p-0 bg-muted flex flex-col border-0">
           <DialogHeader className="p-4 pb-2 shrink-0">
             <DialogTitle className="text-appOnSurface">
               {selectedArticle?.title}
@@ -106,7 +106,7 @@ const Blog = () => {
           </DialogHeader>
           <div className="flex-1 p-4 pt-0 min-h-0">
             {selectedArticle && (
-              <div className="bg-appSurface rounded-lg overflow-hidden h-full shadow-2xl relative z-10">
+              <div className="bg-muted rounded-lg overflow-hidden h-full shadow-2xl relative z-10">
                 <iframe
                   src={selectedArticle.url}
                   title={selectedArticle.title}

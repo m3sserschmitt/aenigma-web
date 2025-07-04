@@ -25,32 +25,12 @@ const BlogArticle = () => {
     <PageLayout currentPage="index">
       <div className="pt-24 pb-20">
         <div className="container mx-auto px-4">
-          <div className="mb-6 flex items-center justify-between">
-            <Button 
-              variant="outline" 
-              onClick={handleBack}
-              className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
-            >
-              <ArrowLeft className="mr-2 h-4 w-4" />
-              {t('blog.backToList')}
-            </Button>
-            
-            <Button 
-              variant="ghost" 
-              onClick={handleOpenExternal}
-              className="text-appOnSurface hover:text-appPrimary"
-            >
-              <ExternalLink className="mr-2 h-4 w-4" />
-              Open in new tab
-            </Button>
-          </div>
-
-          <div className="bg-appSurface border border-appSurfaceHighest rounded-lg overflow-hidden">
+          <div className="bg-appSurface border border-appSurfaceHighest rounded-lg overflow-hidden h-[calc(100vh-6rem)]">
             {decodedUrl && (
               <iframe
                 src={decodedUrl}
                 title="Blog Article"
-                className="w-full h-[80vh] border-0"
+                className="w-full h-full border-0"
                 sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
               />
             )}

@@ -25,7 +25,7 @@ const BlogArticle = () => {
     <PageLayout currentPage="index">
       <div className="pt-24 pb-20">
         <div className="container mx-auto px-4">
-          <div className="bg-appSurface border border-appSurfaceHighest rounded-lg overflow-hidden h-[calc(100vh-6rem)]">
+          <div className="bg-appSurface border border-appSurfaceHighest rounded-lg overflow-hidden h-[calc(100vh-6rem)] shadow-2xl relative z-10">
             {decodedUrl && (
               <iframe
                 src={decodedUrl}

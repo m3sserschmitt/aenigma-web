@@ -4,7 +4,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import PageLayout from "@/components/PageLayout";
 import SectionTitle from "@/components/SectionTitle";
 import BlogCard from "@/components/BlogCard";
-import { BlogArticle, BlogListResponse } from "@/types/blog";
+import { BlogArticle } from "@/types/blog";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2 } from "lucide-react";
 
@@ -28,8 +28,8 @@ const Blog = () => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         
-        const data: BlogListResponse = await response.json();
-        setArticles(data.articles || []);
+        const data: BlogArticle[] = await response.json();
+        setArticles(data || []);
       } catch (err) {
         console.error('Error fetching articles:', err);
         setError(t('blog.error'));

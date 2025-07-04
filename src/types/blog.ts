@@ -4,7 +4,3 @@ export interface BlogArticle {
   date: string;
   url: string;
 }
-
-export interface BlogListResponse {
-  articles: BlogArticle[];
-}

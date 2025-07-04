@@ -1,0 +1,111 @@
+/* Article styling for Aenigma articles */
+/* Use this CSS file in your article HTML files for consistent styling */
+
+body {
+  background-color: #303030;
+  color: #F5F5F5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #FAFAFA;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.2em;
+  border-bottom: 2px solid #757575;
+  padding-bottom: 0.3em;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #E0E0E0;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+p {
+  margin-bottom: 1em;
+  color: #F5F5F5;
+}
+
+a {
+  color: #BDBDBD;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #E0E0E0;
+}
+
+code {
+  background-color: #424242;
+  color: #FAFAFA;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+pre {
+  background-color: #424242;
+  color: #FAFAFA;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border-left: 4px solid #757575;
+}
+
+blockquote {
+  border-left: 4px solid #757575;
+  margin: 1em 0;
+  padding-left: 1em;
+  color: #BDBDBD;
+  font-style: italic;
+}
+
+ul, ol {
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1em 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+th, td {
+  border: 1px solid #757575;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #424242;
+  color: #FAFAFA;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #757575;
+  margin: 2em 0;
+}

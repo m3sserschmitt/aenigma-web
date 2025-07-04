@@ -98,13 +98,13 @@ const Blog = () => {
       </div>
 
       <Dialog open={isModalOpen} onOpenChange={handleCloseModal}>
-        <DialogContent className="max-w-6xl w-[95vw] h-[90vh] p-0 bg-appSurface border-appSurfaceHighest">
-          <DialogHeader className="p-4 pb-0">
+        <DialogContent className="max-w-6xl w-[95vw] h-[90vh] p-0 bg-appSurface border-appSurfaceHighest flex flex-col">
+          <DialogHeader className="p-4 pb-2 shrink-0">
             <DialogTitle className="text-appOnSurface">
               {selectedArticle?.title}
             </DialogTitle>
           </DialogHeader>
-          <div className="flex-1 p-4 pt-2">
+          <div className="flex-1 p-4 pt-0 min-h-0">
             {selectedArticle && (
               <div className="bg-appSurface border border-appSurfaceHighest rounded-lg overflow-hidden h-full shadow-2xl relative z-10">
                 <iframe

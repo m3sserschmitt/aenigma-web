@@ -81,6 +81,16 @@ export const enTranslations = {
   'cta.openSource': 'Open source',
   'cta.dataCollection': 'Data collection',
   
+  // Blog
+  'nav.blog': 'Blog',
+  'blog.title': 'Security & Privacy Blog',
+  'blog.subtitle': 'Latest insights on cryptography, privacy, and secure communications',
+  'blog.loading': 'Loading articles...',
+  'blog.error': 'Error loading articles. Please try again later.',
+  'blog.backToList': 'Back to articles',
+  'blog.readMore': 'Read article',
+  'blog.noArticles': 'No articles available at the moment.',
+
   // Footer
   'footer.tagline': 'Privacy-first messaging for the security-conscious',
   'footer.privacyPolicy': 'Privacy policy',

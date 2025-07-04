@@ -46,6 +46,14 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
     }, 100);
   };
 
+  const handleBlogClick = () => {
+    setIsOpen(false); // Close mobile menu
+    window.location.href = '/#/blog';
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-appSurface/80 backdrop-blur-sm border-b border-appSurfaceHighest z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -78,6 +86,12 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
             }`}
           >
             {t('nav.howItWorks')}
+          </button>
+          <button 
+            onClick={handleBlogClick}
+            className="text-sm hover:text-appPrimary transition-colors text-appOnSurface"
+          >
+            {t('nav.blog')}
           </button>
           <button 
             onClick={() => handleSectionClick('#download')}
@@ -145,6 +159,12 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
                   }`}
                 >
                   {t('nav.howItWorks')}
+                </button>
+                <button 
+                  onClick={handleBlogClick}
+                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
+                >
+                  {t('nav.blog')}
                 </button>
                 <button 
                   onClick={() => handleSectionClick('#download')}

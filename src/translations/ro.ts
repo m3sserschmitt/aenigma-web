@@ -81,6 +81,16 @@ export const roTranslations = {
   'cta.openSource': 'Sursă deschisă',
   'cta.dataCollection': 'Date colectate',
   
+  // Blog
+  'nav.blog': 'Blog',
+  'blog.title': 'Blog Securitate & Confidențialitate',
+  'blog.subtitle': 'Ultimele perspective asupra criptografiei, confidențialității și comunicațiilor sigure',
+  'blog.loading': 'Se încarcă articolele...',
+  'blog.error': 'Eroare la încărcarea articolelor. Vă rugăm să încercați din nou.',
+  'blog.backToList': 'Înapoi la articole',
+  'blog.readMore': 'Citește articolul',
+  'blog.noArticles': 'Nu sunt articole disponibile momentan.',
+
   // Footer
   'footer.tagline': 'Mesagerie orientată către protejarea intimității utilizatorilor',
   'footer.privacyPolicy': 'Politica de confidențialitate',

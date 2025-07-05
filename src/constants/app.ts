@@ -3,7 +3,10 @@ export const APP_CONSTANTS = {
   // URLs
   APK_DOWNLOAD_URL: 'https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk',
   GITHUB_REPO_URL: 'https://github.com/m3sserschmitt/aenigma-android',
-  ARTICLES_API_URL: 'https://articles.aenigma.ro/index.json',
+  
+  // Articles API URLs
+  getArticlesApiUrl: (language: 'en' | 'ro') => 
+    `https://articles.aenigma.ro/index-${language}.json`,
   
   // Cache settings
   CACHE_EXPIRY_MS: 10 * 60 * 1000, // 10 minutes

@@ -34,23 +34,22 @@ const ArticlePage = () => {
         setError(null);
         
         // Try to get article metadata from localStorage first
-        const cachedArticles = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES);
+        const cacheKey = `${APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES}-${language}`;
+        const cachedArticles = localStorage.getItem(cacheKey);
         let articles: BlogArticle[] = [];
         
         if (cachedArticles) {
           articles = JSON.parse(cachedArticles);
         } else {
           // Fallback: fetch from server if not in cache
-          const indexResponse = await fetch(APP_CONSTANTS.ARTICLES_API_URL);
+          const indexResponse = await fetch(APP_CONSTANTS.getArticlesApiUrl(language));
           if (!indexResponse.ok) {
             throw new Error(`Failed to fetch article index: ${indexResponse.status}`);
           }
           articles = await indexResponse.json();
         }
         
-        const foundArticle = articles.find(article => 
-          article.urls.en === url || article.urls.ro === url
-        );
+        const foundArticle = articles.find(article => article.url === url);
         
         if (!foundArticle) {
           throw new Error('Article not found');
@@ -58,11 +57,8 @@ const ArticlePage = () => {
         
         setArticle(foundArticle);
         
-        // Use language-specific URL or fallback to the provided URL
-        const articleUrl = foundArticle.urls[language] || url;
-        
         // Fetch markdown content
-        const contentResponse = await fetch(articleUrl);
+        const contentResponse = await fetch(url);
         if (!contentResponse.ok) {
           throw new Error(`Failed to fetch article content: ${contentResponse.status}`);
         }
@@ -78,7 +74,7 @@ const ArticlePage = () => {
     };
 
     fetchArticleData();
-  }, [url]);
+  }, [url, language]);
 
 
   return (

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BlogArticle } from "@/types/blog";
 import { APP_CONSTANTS } from "@/constants/app";
+import { Language } from "@/types/language";
 
 interface UseBlogArticlesReturn {
   articles: BlogArticle[];
@@ -8,7 +9,7 @@ interface UseBlogArticlesReturn {
   error: string | null;
 }
 
-export const useBlogArticles = (errorMessage: string): UseBlogArticlesReturn => {
+export const useBlogArticles = (errorMessage: string, language: Language): UseBlogArticlesReturn => {
   const [articles, setArticles] = useState<BlogArticle[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -19,9 +20,11 @@ export const useBlogArticles = (errorMessage: string): UseBlogArticlesReturn => 
         setLoading(true);
         setError(null);
         
-        // Check localStorage first
-        const cachedArticles = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES);
-        const cacheTimestamp = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES_TIMESTAMP);
+        // Check localStorage first (language-specific cache)
+        const cacheKey = `${APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES}-${language}`;
+        const timestampKey = `${APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES_TIMESTAMP}-${language}`;
+        const cachedArticles = localStorage.getItem(cacheKey);
+        const cacheTimestamp = localStorage.getItem(timestampKey);
         
         if (cachedArticles && cacheTimestamp) {
           const isExpired = Date.now() - parseInt(cacheTimestamp) > APP_CONSTANTS.CACHE_EXPIRY_MS;
@@ -33,7 +36,7 @@ export const useBlogArticles = (errorMessage: string): UseBlogArticlesReturn => 
         }
         
         // Fetch from server
-        const response = await fetch(APP_CONSTANTS.ARTICLES_API_URL);
+        const response = await fetch(APP_CONSTANTS.getArticlesApiUrl(language));
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -41,9 +44,9 @@ export const useBlogArticles = (errorMessage: string): UseBlogArticlesReturn => 
         
         const data: BlogArticle[] = await response.json();
         
-        // Cache the data
-        localStorage.setItem(APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES, JSON.stringify(data));
-        localStorage.setItem(APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES_TIMESTAMP, Date.now().toString());
+        // Cache the data (language-specific)
+        localStorage.setItem(cacheKey, JSON.stringify(data));
+        localStorage.setItem(timestampKey, Date.now().toString());
         
         setArticles(data || []);
       } catch (err) {
@@ -55,7 +58,7 @@ export const useBlogArticles = (errorMessage: string): UseBlogArticlesReturn => 
     };
 
     fetchArticles();
-  }, [errorMessage]);
+  }, [errorMessage, language]);
 
   return { articles, loading, error };
 };

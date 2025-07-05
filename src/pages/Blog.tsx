@@ -14,13 +14,12 @@ import { APP_CONSTANTS } from "@/constants/app";
 const Blog = () => {
   const { t, language } = useLanguage();
   const navigate = useNavigate();
-  const { articles, loading, error } = useBlogArticles(t('blog.error'));
+  const { articles, loading, error } = useBlogArticles(t('blog.error'), language);
   const [displayedCount, setDisplayedCount] = useState<number>(APP_CONSTANTS.INITIAL_ARTICLES_COUNT);
 
   const handleReadArticle = (article: BlogArticle) => {
-    const articleUrl = article.urls[language] || article.urls.en;
     const params = new URLSearchParams({
-      url: articleUrl
+      url: article.url
     });
     navigate(`/blog/article?${params.toString()}`);
   };

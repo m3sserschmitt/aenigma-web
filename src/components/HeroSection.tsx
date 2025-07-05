@@ -13,8 +13,19 @@ const HeroSection = () => {
     <section className="pt-32 pb-20 px-4 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-appPrimary/10 via-appSecondary/5 to-transparent"></div>
-      <div className="absolute top-20 left-1/4 w-64 h-64 bg-appPrimary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-appSecondary/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 left-1/4 w-64 h-64 bg-appPrimary/10 rounded-full blur-3xl animate-lightning-flash"></div>
+      <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-appSecondary/10 rounded-full blur-3xl animate-lightning-flash" style={{ animationDelay: '2s' }}></div>
+      
+      {/* Lightning Effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/3 w-0.5 h-32 bg-gradient-to-b from-transparent via-appPrimary/20 to-transparent animate-lightning-bolt"></div>
+        <div className="absolute top-1/2 right-1/4 w-0.5 h-24 bg-gradient-to-b from-transparent via-appSecondary/15 to-transparent animate-lightning-bolt" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute bottom-1/3 left-1/2 w-0.5 h-28 bg-gradient-to-b from-transparent via-appPrimary/10 to-transparent animate-lightning-bolt" style={{ animationDelay: '1.5s' }}></div>
+        
+        {/* Diagonal lightning streaks */}
+        <div className="absolute top-1/3 right-1/3 w-16 h-0.5 bg-gradient-to-r from-transparent via-appPrimary/15 to-transparent animate-lightning-bolt transform rotate-45" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-1/4 left-1/4 w-12 h-0.5 bg-gradient-to-r from-transparent via-appSecondary/10 to-transparent animate-lightning-bolt transform -rotate-45" style={{ animationDelay: '2.5s' }}></div>
+      </div>
       
       <div className="container mx-auto text-center relative z-10">
         <div className="flex justify-center mb-8 animate-fade-in">

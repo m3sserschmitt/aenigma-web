@@ -109,12 +109,58 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'lightning-flash': {
+					'0%, 100%': {
+						opacity: '0.05',
+						transform: 'scale(1)'
+					},
+					'20%': {
+						opacity: '0.15',
+						transform: 'scale(1.02)'
+					},
+					'40%': {
+						opacity: '0.08'
+					},
+					'60%': {
+						opacity: '0.2',
+						transform: 'scale(1.01)'
+					},
+					'80%': {
+						opacity: '0.1'
+					}
+				},
+				'lightning-bolt': {
+					'0%, 100%': {
+						opacity: '0',
+						transform: 'translateX(-50%) translateY(-50%) rotate(45deg) scaleY(0)'
+					},
+					'10%': {
+						opacity: '0.3',
+						transform: 'translateX(-50%) translateY(-50%) rotate(45deg) scaleY(1)'
+					},
+					'15%': {
+						opacity: '0',
+						transform: 'translateX(-50%) translateY(-50%) rotate(45deg) scaleY(0)'
+					},
+					'85%': {
+						opacity: '0'
+					},
+					'90%': {
+						opacity: '0.2',
+						transform: 'translateX(-50%) translateY(-50%) rotate(45deg) scaleY(1)'
+					},
+					'95%': {
+						opacity: '0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out'
+				'fade-in': 'fade-in 0.6s ease-out',
+				'lightning-flash': 'lightning-flash 4s ease-in-out infinite',
+				'lightning-bolt': 'lightning-bolt 6s ease-in-out infinite'
 			}
 		}
 	},

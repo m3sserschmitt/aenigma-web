@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 
 interface PageLayoutProps {
   children: React.ReactNode;
-  currentPage?: 'index' | 'how-it-works';
+  currentPage?: 'index' | 'how-it-works' | 'blog';
   className?: string;
 }
 

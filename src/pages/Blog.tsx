@@ -1,20 +1,19 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import PageLayout from "@/components/PageLayout";
 import SectionTitle from "@/components/SectionTitle";
 import BlogCard from "@/components/BlogCard";
 import { BlogArticle } from "@/types/blog";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Loader2 } from "lucide-react";
 
 const Blog = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
   const [articles, setArticles] = useState<BlogArticle[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<BlogArticle | null>(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -43,13 +42,12 @@ const Blog = () => {
   }, [t]);
 
   const handleReadArticle = (article: BlogArticle) => {
-    setSelectedArticle(article);
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-    setSelectedArticle(null);
+    const params = new URLSearchParams({
+      title: article.title,
+      url: article.url,
+      date: article.date
+    });
+    navigate(`/blog/article?${params.toString()}`);
   };
 
   return (
@@ -96,28 +94,6 @@ const Blog = () => {
           )}
         </div>
       </div>
-
-      <Dialog open={isModalOpen} onOpenChange={handleCloseModal}>
-        <DialogContent className="max-w-7xl w-[98vw] h-[90vh] p-0 bg-muted flex flex-col border-0">
-          <DialogHeader className="p-4 pb-2 shrink-0">
-            <DialogTitle className="text-appOnSurface">
-              {selectedArticle?.title}
-            </DialogTitle>
-          </DialogHeader>
-          <div className="flex-1 p-4 pt-0 min-h-0">
-            {selectedArticle && (
-              <div className="bg-muted rounded-lg overflow-hidden h-full shadow-2xl relative z-10">
-                <iframe
-                  src={selectedArticle.url}
-                  title={selectedArticle.title}
-                  className="w-full h-full border-0"
-                  sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-                />
-              </div>
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
     </PageLayout>
   );
 };

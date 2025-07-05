@@ -15,7 +15,7 @@ import {
 import { useState } from "react";
 
 interface NavigationProps {
-  currentPage?: 'index' | 'how-it-works';
+  currentPage?: 'index' | 'how-it-works' | 'blog';
 }
 
 const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
@@ -89,7 +89,9 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           </button>
           <button 
             onClick={handleBlogClick}
-            className="text-sm hover:text-appPrimary transition-colors text-appOnSurface"
+            className={`text-sm hover:text-appPrimary transition-colors ${
+              currentPage === 'blog' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
+            }`}
           >
             {t('nav.blog')}
           </button>
@@ -162,7 +164,9 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
                 </button>
                 <button 
                   onClick={handleBlogClick}
-                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
+                  className={`text-left text-sm hover:text-appPrimary transition-colors py-2 ${
+                    currentPage === 'blog' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
+                  }`}
                 >
                   {t('nav.blog')}
                 </button>

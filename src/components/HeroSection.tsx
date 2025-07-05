@@ -51,38 +51,49 @@ const HeroSection = () => {
               direction: "none",
               enable: true,
               outModes: {
-                default: "out",
+                default: "bounce",
               },
               random: true,
-              speed: 0.8,
+              speed: 1.2,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 400,
+                area: 300,
               },
-              value: 60,
+              value: 100,
             },
             opacity: {
-              value: { min: 0.1, max: 0.3 },
+              value: { min: 0.2, max: 0.6 },
               animation: {
                 enable: true,
-                speed: 1,
+                speed: 1.5,
                 sync: false,
+                startValue: "min",
+                destroy: "none",
               },
             },
             shape: {
               type: "circle",
             },
             size: {
-              value: { min: 40, max: 120 },
+              value: { min: 60, max: 150 },
               animation: {
                 enable: true,
-                speed: 0.5,
+                speed: 0.8,
                 sync: false,
+                startValue: "min",
+                destroy: "none",
               },
             },
+            life: {
+              duration: {
+                sync: false,
+                value: 0
+              },
+              count: 0
+            }
           },
           detectRetina: true,
         }}

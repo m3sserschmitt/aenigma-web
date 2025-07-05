@@ -16,7 +16,7 @@ const BlogCard = ({ article, onRead }: BlogCardProps) => {
   return (
     <Card className="bg-appSurface/50 border-appSurfaceHighest hover:bg-appSurface/70 transition-all duration-300 hover:scale-105 hover:border-appPrimary/50 animate-fade-in group">
       <CardHeader>
-        <CardTitle className="text-appOnSurface group-hover:text-appPrimary transition-colors">
+        <CardTitle className="text-appOnSurface">
           {article.title}
         </CardTitle>
         <div className="flex items-center space-x-2 text-sm text-appOnSurface/70">

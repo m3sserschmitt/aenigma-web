@@ -5,9 +5,20 @@ import { Download, Github } from "lucide-react";
 import Logo from "@/components/Logo";
 import SectionTitle from "@/components/SectionTitle";
 import { APP_CONSTANTS } from "@/constants/app";
+import { useCallback } from "react";
+import Particles from "react-particles";
+import { loadSlim } from "@tsparticles/slim";
 
 const HeroSection = () => {
   const { t } = useLanguage();
+
+  const particlesInit = useCallback(async (engine: any) => {
+    await loadSlim(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(async (container: any) => {
+    // Particles loaded callback
+  }, []);
 
   return (
     <section className="pt-32 pb-20 px-4 relative overflow-hidden">
@@ -16,14 +27,66 @@ const HeroSection = () => {
       <div className="absolute top-20 left-1/4 w-64 h-64 bg-appPrimary/10 rounded-full blur-3xl animate-lightning-flash"></div>
       <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-appSecondary/10 rounded-full blur-3xl animate-lightning-flash" style={{ animationDelay: '2s' }}></div>
       
-      {/* Mist Effects */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-16 left-0 w-96 h-32 bg-gradient-to-r from-transparent via-appSurface/15 to-transparent rounded-full blur-2xl animate-mist-drift"></div>
-        <div className="absolute top-1/3 right-0 w-80 h-24 bg-gradient-to-l from-transparent via-appPrimary/10 to-transparent rounded-full blur-xl animate-mist-drift" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute bottom-1/4 left-1/4 w-72 h-20 bg-gradient-to-r from-transparent via-appSecondary/12 to-transparent rounded-full blur-xl animate-mist-float"></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-16 bg-gradient-to-r from-transparent via-appSurface/20 to-transparent rounded-full blur-2xl animate-mist-float" style={{ animationDelay: '6s' }}></div>
-        <div className="absolute bottom-16 right-1/3 w-88 h-28 bg-gradient-to-l from-transparent via-appPrimary/8 to-transparent rounded-full blur-2xl animate-mist-drift" style={{ animationDelay: '8s' }}></div>
-      </div>
+      {/* React Particles - Mist Effects */}
+      <Particles
+        id="mistParticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        className="absolute inset-0 pointer-events-none"
+        options={{
+          background: {
+            color: {
+              value: "transparent",
+            },
+          },
+          fpsLimit: 60,
+          particles: {
+            color: {
+              value: ["#757575", "#616161", "#BDBDBD"],
+            },
+            links: {
+              enable: false,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "out",
+              },
+              random: true,
+              speed: 0.3,
+              straight: false,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 30,
+            },
+            opacity: {
+              value: { min: 0.02, max: 0.08 },
+              animation: {
+                enable: true,
+                speed: 0.5,
+                sync: false,
+              },
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: { min: 20, max: 80 },
+              animation: {
+                enable: true,
+                speed: 0.2,
+                sync: false,
+              },
+            },
+          },
+          detectRetina: true,
+        }}
+      />
       
       {/* Lightning Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

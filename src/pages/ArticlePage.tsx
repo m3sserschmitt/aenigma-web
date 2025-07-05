@@ -50,7 +50,7 @@ const ArticlePage = () => {
           articles = JSON.parse(cachedArticles);
         } else {
           // Fallback: fetch from server if not in cache
-          const indexResponse = await fetch(APP_CONSTANTS.getArticlesApiUrl(language));
+          const indexResponse = await fetch(APP_CONSTANTS.getArticlesIndexUrl(language));
           if (!indexResponse.ok) {
             throw new Error(`Failed to fetch article index: ${indexResponse.status}`);
           }

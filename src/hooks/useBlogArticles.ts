@@ -36,7 +36,7 @@ export const useBlogArticles = (errorMessage: string, language: Language): UseBl
         }
         
         // Fetch from server
-        const response = await fetch(APP_CONSTANTS.getArticlesApiUrl(language));
+        const response = await fetch(APP_CONSTANTS.getArticlesIndexUrl(language));
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

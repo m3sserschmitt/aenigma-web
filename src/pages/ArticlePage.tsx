@@ -30,13 +30,21 @@ const ArticlePage = () => {
         setLoading(true);
         setError(null);
         
-        // Fetch article details from index.json
-        const indexResponse = await fetch('https://articles.aenigma.ro/index.json');
-        if (!indexResponse.ok) {
-          throw new Error(`Failed to fetch article index: ${indexResponse.status}`);
+        // Try to get article metadata from localStorage first
+        const cachedArticles = localStorage.getItem('blog-articles');
+        let articles: BlogArticle[] = [];
+        
+        if (cachedArticles) {
+          articles = JSON.parse(cachedArticles);
+        } else {
+          // Fallback: fetch from server if not in cache
+          const indexResponse = await fetch('https://articles.aenigma.ro/index.json');
+          if (!indexResponse.ok) {
+            throw new Error(`Failed to fetch article index: ${indexResponse.status}`);
+          }
+          articles = await indexResponse.json();
         }
         
-        const articles: BlogArticle[] = await indexResponse.json();
         const foundArticle = articles.find(article => article.url === url);
         
         if (!foundArticle) {

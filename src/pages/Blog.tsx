@@ -21,7 +21,21 @@ const Blog = () => {
         setLoading(true);
         setError(null);
         
-        // Replace with your actual JSON URL
+        // Check localStorage first
+        const cachedArticles = localStorage.getItem('blog-articles');
+        const cacheTimestamp = localStorage.getItem('blog-articles-timestamp');
+        const cacheExpiry = 10 * 60 * 1000; // 10 minutes
+        
+        if (cachedArticles && cacheTimestamp) {
+          const isExpired = Date.now() - parseInt(cacheTimestamp) > cacheExpiry;
+          if (!isExpired) {
+            setArticles(JSON.parse(cachedArticles));
+            setLoading(false);
+            return;
+          }
+        }
+        
+        // Fetch from server
         const response = await fetch('https://articles.aenigma.ro/index.json');
         
         if (!response.ok) {
@@ -29,6 +43,11 @@ const Blog = () => {
         }
         
         const data: BlogArticle[] = await response.json();
+        
+        // Cache the data
+        localStorage.setItem('blog-articles', JSON.stringify(data));
+        localStorage.setItem('blog-articles-timestamp', Date.now().toString());
+        
         setArticles(data || []);
       } catch (err) {
         console.error('Error fetching articles:', err);

@@ -55,7 +55,7 @@ const HowItWorks = () => {
         <section className="flex-shrink-0 pb-12 px-4">
           <div className="container mx-auto">
             <SectionTitle
-              icon={<Shield className="h-10 w-10 text-appPrimary" />}
+              icon={<Shield className="h-12 w-12 md:h-10 md:w-10 text-appPrimary" />}
               title={t('howItWorks.title')}
               subtitle={t('howItWorks.subtitle')}
             />
@@ -68,7 +68,7 @@ const HowItWorks = () => {
           <section className="flex-shrink-0 py-12 bg-appSurface/30">
             <div className="container mx-auto">
               <SectionTitle
-                icon={<Lock className="h-8 w-8 text-appPrimary" />}
+                icon={<Lock className="h-10 w-10 md:h-8 md:w-8 text-appPrimary" />}
                 title={t('howItWorks.hybrid.title')}
                 className="mb-8"
               />
@@ -95,7 +95,7 @@ const HowItWorks = () => {
                 {/* Keys Section */}
                 <div className="flex-1 min-w-[300px]">
                   <h2 className="text-2xl font-bold mb-6 text-appOnPrimary flex items-center justify-center lg:justify-start">
-                    <Key className="h-6 w-6 text-appPrimary mr-2" />
+                    <Key className="h-8 w-8 md:h-6 md:w-6 text-appPrimary mr-2" />
                     {t('howItWorks.keys.title')}
                   </h2>
                   
@@ -115,7 +115,7 @@ const HowItWorks = () => {
                 {/* Message Signing Section */}
                 <div className="flex-1 min-w-[300px]">
                   <h2 className="text-2xl font-bold mb-6 text-appOnPrimary flex items-center justify-center lg:justify-start">
-                    <FileSignature className="h-6 w-6 text-appPrimary mr-2" />
+                    <FileSignature className="h-8 w-8 md:h-6 md:w-6 text-appPrimary mr-2" />
                     {t('howItWorks.signing.title')}
                   </h2>
                   
@@ -144,7 +144,7 @@ const HowItWorks = () => {
             <div className="container mx-auto">
               <div className="max-w-6xl mx-auto">
                 <SectionTitle
-                  icon={<QrCode className="h-8 w-8 text-appPrimary" />}
+                  icon={<QrCode className="h-10 w-10 md:h-8 md:w-8 text-appPrimary" />}
                   title={t('howItWorks.sharing.title')}
                   className="mb-8"
                 />

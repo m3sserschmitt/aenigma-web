@@ -4,7 +4,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import PageLayout from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import ReactMarkdown from "react-markdown";
+import { marked } from "marked";
+import DOMPurify from "dompurify";
 import { BlogArticle } from "@/types/blog";
 import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import { ErrorAlert } from "@/components/ui/error-alert";
@@ -109,9 +110,12 @@ const ArticlePage = () => {
           {error && <ErrorAlert message={error} />}
 
           {!loading && !error && content && (
-            <div className="prose prose-lg max-w-none prose-headings:text-appOnSurface prose-p:text-appOnSurface prose-strong:text-appOnSurface prose-code:text-appPrimary prose-pre:bg-appSurface prose-pre:border prose-pre:border-appSurfaceHighest prose-blockquote:border-l-appPrimary prose-blockquote:text-appOnSurface/80">
-              <ReactMarkdown>{content}</ReactMarkdown>
-            </div>
+            <div 
+              className="prose prose-lg max-w-none prose-headings:text-appOnSurface prose-p:text-appOnSurface prose-strong:text-appOnSurface prose-code:text-appPrimary prose-pre:bg-appSurface prose-pre:border prose-pre:border-appSurfaceHighest prose-blockquote:border-l-appPrimary prose-blockquote:text-appOnSurface/80"
+              dangerouslySetInnerHTML={{
+                __html: DOMPurify.sanitize(marked.parse(content) as string)
+              }}
+            />
           )}
         </div>
       </div>

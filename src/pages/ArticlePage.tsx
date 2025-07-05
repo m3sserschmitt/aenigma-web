@@ -14,7 +14,9 @@ const ArticlePage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   
+  const title = searchParams.get("title") || "Article";
   const url = searchParams.get("url");
+  const date = searchParams.get("date");
 
   useEffect(() => {
     const fetchMarkdown = async () => {
@@ -70,8 +72,14 @@ const ArticlePage = () => {
             </Button>
             
             <h1 className="text-3xl md:text-4xl font-bold text-appOnSurface mb-4">
-              Article
+              {title}
             </h1>
+            
+            {date && (
+              <p className="text-appOnSurface/70 mb-8">
+                {formatDate(date)}
+              </p>
+            )}
           </div>
 
           {loading && (

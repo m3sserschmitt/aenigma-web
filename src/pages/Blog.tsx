@@ -43,7 +43,9 @@ const Blog = () => {
 
   const handleReadArticle = (article: BlogArticle) => {
     const params = new URLSearchParams({
-      url: article.url
+      title: article.title,
+      url: article.url,
+      date: article.date
     });
     navigate(`/blog/article?${params.toString()}`);
   };

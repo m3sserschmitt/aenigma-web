@@ -6,6 +6,7 @@ import SectionTitle from "@/components/SectionTitle";
 import BlogCard from "@/components/BlogCard";
 import { BlogArticle } from "@/types/blog";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
 
 const Blog = () => {
@@ -14,6 +15,9 @@ const Blog = () => {
   const [articles, setArticles] = useState<BlogArticle[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [displayedCount, setDisplayedCount] = useState(9); // Show 9 articles initially
+  
+  const ARTICLES_PER_PAGE = 6; // Load 6 more articles each time
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -67,6 +71,13 @@ const Blog = () => {
     navigate(`/blog/article?${params.toString()}`);
   };
 
+  const handleShowMore = () => {
+    setDisplayedCount(prev => prev + ARTICLES_PER_PAGE);
+  };
+
+  const displayedArticles = articles.slice(0, displayedCount);
+  const hasMoreArticles = displayedCount < articles.length;
+
   return (
     <PageLayout currentPage="index">
       <div className="pt-24 pb-20">
@@ -99,15 +110,29 @@ const Blog = () => {
           )}
 
           {!loading && !error && articles.length > 0 && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {articles.map((article, index) => (
-                <BlogCard
-                  key={`${article.url}-${index}`}
-                  article={article}
-                  onRead={handleReadArticle}
-                />
-              ))}
-            </div>
+            <>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {displayedArticles.map((article, index) => (
+                  <BlogCard
+                    key={`${article.url}-${index}`}
+                    article={article}
+                    onRead={handleReadArticle}
+                  />
+                ))}
+              </div>
+              
+              {hasMoreArticles && (
+                <div className="flex justify-center mt-12">
+                  <Button 
+                    onClick={handleShowMore}
+                    variant="outline"
+                    className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
+                  >
+                    Show More Articles
+                  </Button>
+                </div>
+              )}
+            </>
           )}
         </div>
       </div>

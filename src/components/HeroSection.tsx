@@ -54,21 +54,21 @@ const HeroSection = () => {
                 default: "out",
               },
               random: true,
-              speed: 0.3,
+              speed: 0.8,
               straight: false,
             },
             number: {
               density: {
                 enable: true,
-                area: 800,
+                area: 400,
               },
-              value: 30,
+              value: 60,
             },
             opacity: {
-              value: { min: 0.02, max: 0.08 },
+              value: { min: 0.1, max: 0.3 },
               animation: {
                 enable: true,
-                speed: 0.5,
+                speed: 1,
                 sync: false,
               },
             },
@@ -76,10 +76,10 @@ const HeroSection = () => {
               type: "circle",
             },
             size: {
-              value: { min: 20, max: 80 },
+              value: { min: 40, max: 120 },
               animation: {
                 enable: true,
-                speed: 0.2,
+                speed: 0.5,
                 sync: false,
               },
             },

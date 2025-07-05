@@ -46,6 +46,14 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
     }, 100);
   };
 
+  const handleAboutClick = () => {
+    setIsOpen(false); // Close mobile menu
+    window.location.href = '/';
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   const handleBlogClick = () => {
     setIsOpen(false); // Close mobile menu
     window.location.href = '/#/blog';
@@ -64,20 +72,12 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
           <button 
-            onClick={() => handleSectionClick('#features')}
+            onClick={handleAboutClick}
             className={`text-sm hover:text-appPrimary transition-colors ${
-              currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
+              currentPage === 'index' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
             }`}
           >
-            {t('nav.features')}
-          </button>
-          <button 
-            onClick={() => handleSectionClick('#security')}
-            className={`text-sm hover:text-appPrimary transition-colors ${
-              currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
-            }`}
-          >
-            {t('nav.security')}
+            About
           </button>
           <button 
             onClick={handleHowItWorksClick}
@@ -94,14 +94,6 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
             }`}
           >
             {t('nav.blog')}
-          </button>
-          <button 
-            onClick={() => handleSectionClick('#download')}
-            className={`text-sm hover:text-appPrimary transition-colors ${
-              currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
-            }`}
-          >
-            {t('nav.download')}
           </button>
         </div>
         
@@ -143,16 +135,12 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
               </SheetHeader>
               <div className="flex flex-col space-y-4 mt-6">
                 <button 
-                  onClick={() => handleSectionClick('#features')}
-                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
+                  onClick={handleAboutClick}
+                  className={`text-left text-sm hover:text-appPrimary transition-colors py-2 ${
+                    currentPage === 'index' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
+                  }`}
                 >
-                  {t('nav.features')}
-                </button>
-                <button 
-                  onClick={() => handleSectionClick('#security')}
-                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
-                >
-                  {t('nav.security')}
+                  About
                 </button>
                 <button 
                   onClick={handleHowItWorksClick}
@@ -169,12 +157,6 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
                   }`}
                 >
                   {t('nav.blog')}
-                </button>
-                <button 
-                  onClick={() => handleSectionClick('#download')}
-                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
-                >
-                  {t('nav.download')}
                 </button>
               </div>
             </SheetContent>

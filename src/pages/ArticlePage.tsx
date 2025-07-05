@@ -12,7 +12,7 @@ import { formatDate } from "@/utils/date";
 import { APP_CONSTANTS } from "@/constants/app";
 
 const ArticlePage = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [searchParams] = useSearchParams();
   const [content, setContent] = useState<string>("");
   const [article, setArticle] = useState<BlogArticle | null>(null);
@@ -48,7 +48,9 @@ const ArticlePage = () => {
           articles = await indexResponse.json();
         }
         
-        const foundArticle = articles.find(article => article.url === url);
+        const foundArticle = articles.find(article => 
+          article.urls.en === url || article.urls.ro === url
+        );
         
         if (!foundArticle) {
           throw new Error('Article not found');
@@ -56,8 +58,11 @@ const ArticlePage = () => {
         
         setArticle(foundArticle);
         
+        // Use language-specific URL or fallback to the provided URL
+        const articleUrl = foundArticle.urls[language] || url;
+        
         // Fetch markdown content
-        const contentResponse = await fetch(url);
+        const contentResponse = await fetch(articleUrl);
         if (!contentResponse.ok) {
           throw new Error(`Failed to fetch article content: ${contentResponse.status}`);
         }

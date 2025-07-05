@@ -12,14 +12,15 @@ import { useBlogArticles } from "@/hooks/useBlogArticles";
 import { APP_CONSTANTS } from "@/constants/app";
 
 const Blog = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const navigate = useNavigate();
   const { articles, loading, error } = useBlogArticles(t('blog.error'));
   const [displayedCount, setDisplayedCount] = useState<number>(APP_CONSTANTS.INITIAL_ARTICLES_COUNT);
 
   const handleReadArticle = (article: BlogArticle) => {
+    const articleUrl = article.urls[language] || article.urls.en;
     const params = new URLSearchParams({
-      url: article.url
+      url: articleUrl
     });
     navigate(`/blog/article?${params.toString()}`);
   };
@@ -56,7 +57,7 @@ const Blog = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {displayedArticles.map((article, index) => (
                   <BlogCard
-                    key={`${article.url}-${index}`}
+                    key={`${article.title}-${article.date}-${index}`}
                     article={article}
                     onRead={handleReadArticle}
                   />

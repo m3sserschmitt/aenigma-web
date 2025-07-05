@@ -1,7 +1,7 @@
 
 
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Download, Menu } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Logo from "@/components/Logo";
@@ -22,12 +22,20 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
   const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleAboutClick = () => {
+  const handleDownload = () => {
+    window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank');
+  };
+
+  const handleSectionClick = (sectionId: string) => {
     setIsOpen(false); // Close mobile menu
-    window.location.href = '/';
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 100);
+    if (currentPage === 'index') {
+      const element = document.querySelector(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.location.href = '/';
+    }
   };
 
   const handleHowItWorksClick = () => {
@@ -56,12 +64,20 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-6">
           <button 
-            onClick={handleAboutClick}
+            onClick={() => handleSectionClick('#features')}
             className={`text-sm hover:text-appPrimary transition-colors ${
-              currentPage === 'index' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
+              currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
             }`}
           >
-            About
+            {t('nav.features')}
+          </button>
+          <button 
+            onClick={() => handleSectionClick('#security')}
+            className={`text-sm hover:text-appPrimary transition-colors ${
+              currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
+            }`}
+          >
+            {t('nav.security')}
           </button>
           <button 
             onClick={handleHowItWorksClick}
@@ -79,16 +95,40 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
           >
             {t('nav.blog')}
           </button>
+          <button 
+            onClick={() => handleSectionClick('#download')}
+            className={`text-sm hover:text-appPrimary transition-colors ${
+              currentPage === 'index' ? 'text-appOnSurface' : 'text-appOnSurface'
+            }`}
+          >
+            {t('nav.download')}
+          </button>
         </div>
         
         {/* Desktop Controls */}
         <div className="hidden md:flex items-center space-x-2">
           <LanguageSwitcher />
+          <Button 
+            variant="outline" 
+            size="sm"
+            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
+            onClick={handleDownload}
+          >
+            <Download className="h-4 w-4" />
+          </Button>
         </div>
 
         {/* Mobile Controls */}
         <div className="flex md:hidden items-center space-x-2">
           <LanguageSwitcher />
+          <Button 
+            variant="outline" 
+            size="sm"
+            className="border-appPrimary text-appPrimary hover:bg-appPrimary hover:text-appOnPrimary"
+            onClick={handleDownload}
+          >
+            <Download className="h-4 w-4" />
+          </Button>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="sm" className="text-appOnSurface">
@@ -103,12 +143,16 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
               </SheetHeader>
               <div className="flex flex-col space-y-4 mt-6">
                 <button 
-                  onClick={handleAboutClick}
-                  className={`text-left text-sm hover:text-appPrimary transition-colors py-2 ${
-                    currentPage === 'index' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
-                  }`}
+                  onClick={() => handleSectionClick('#features')}
+                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
                 >
-                  About
+                  {t('nav.features')}
+                </button>
+                <button 
+                  onClick={() => handleSectionClick('#security')}
+                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
+                >
+                  {t('nav.security')}
                 </button>
                 <button 
                   onClick={handleHowItWorksClick}
@@ -125,6 +169,12 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
                   }`}
                 >
                   {t('nav.blog')}
+                </button>
+                <button 
+                  onClick={() => handleSectionClick('#download')}
+                  className="text-left text-sm text-appOnSurface hover:text-appPrimary transition-colors py-2"
+                >
+                  {t('nav.download')}
                 </button>
               </div>
             </SheetContent>

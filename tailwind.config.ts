@@ -157,19 +157,19 @@ export default {
 				'mist-float': {
 					'0%, 100%': {
 						transform: 'translateX(-10px) translateY(0px)',
-						opacity: '0.03'
+						opacity: '0.08'
 					},
 					'25%': {
 						transform: 'translateX(5px) translateY(-5px)',
-						opacity: '0.08'
+						opacity: '0.15'
 					},
 					'50%': {
 						transform: 'translateX(8px) translateY(2px)',
-						opacity: '0.05'
+						opacity: '0.12'
 					},
 					'75%': {
 						transform: 'translateX(-3px) translateY(-3px)',
-						opacity: '0.1'
+						opacity: '0.18'
 					}
 				},
 				'mist-drift': {
@@ -178,10 +178,10 @@ export default {
 						opacity: '0'
 					},
 					'20%': {
-						opacity: '0.06'
+						opacity: '0.12'
 					},
 					'80%': {
-						opacity: '0.04'
+						opacity: '0.08'
 					},
 					'100%': {
 						transform: 'translateX(20px) scale(1.2)',

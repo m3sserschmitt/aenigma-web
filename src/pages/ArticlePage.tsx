@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSearchParams, Link } from "react-router-dom";
+import { useSearchParams, Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import PageLayout from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
@@ -15,12 +15,19 @@ import { APP_CONSTANTS } from "@/constants/app";
 const ArticlePage = () => {
   const { t, language } = useLanguage();
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const [content, setContent] = useState<string>("");
   const [article, setArticle] = useState<BlogArticle | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   
   const url = searchParams.get("url");
+
+  // Extract article identifier from URL (e.g., "hello" from "hello-ro.md")
+  const getArticleId = (url: string): string | null => {
+    const match = url.match(/\/([^\/]+)-[a-z]{2}\.md$/);
+    return match ? match[1] : null;
+  };
 
   useEffect(() => {
     const fetchArticleData = async () => {
@@ -50,7 +57,27 @@ const ArticlePage = () => {
           articles = await indexResponse.json();
         }
         
-        const foundArticle = articles.find(article => article.url === url);
+        // First try to find the exact URL match
+        let foundArticle = articles.find(article => article.url === url);
+        
+        // If not found, try to find by article ID (for language switching)
+        if (!foundArticle) {
+          const articleId = getArticleId(url);
+          if (articleId) {
+            foundArticle = articles.find(article => {
+              const currentId = getArticleId(article.url);
+              return currentId === articleId;
+            });
+            
+            // If found by ID, update the URL parameter to the correct language version
+            if (foundArticle) {
+              const params = new URLSearchParams(searchParams);
+              params.set('url', foundArticle.url);
+              navigate(`/blog/article?${params.toString()}`, { replace: true });
+              return; // Let the navigation trigger a new effect
+            }
+          }
+        }
         
         if (!foundArticle) {
           throw new Error('Article not found');
@@ -59,7 +86,7 @@ const ArticlePage = () => {
         setArticle(foundArticle);
         
         // Fetch markdown content
-        const contentResponse = await fetch(url);
+        const contentResponse = await fetch(foundArticle.url);
         if (!contentResponse.ok) {
           throw new Error(`Failed to fetch article content: ${contentResponse.status}`);
         }
@@ -75,7 +102,7 @@ const ArticlePage = () => {
     };
 
     fetchArticleData();
-  }, [url, language]);
+  }, [url, language, navigate, searchParams]);
 
 
   return (

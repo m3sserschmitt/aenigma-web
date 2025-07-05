@@ -16,6 +16,15 @@ const HeroSection = () => {
       <div className="absolute top-20 left-1/4 w-64 h-64 bg-appPrimary/10 rounded-full blur-3xl animate-lightning-flash"></div>
       <div className="absolute bottom-20 right-1/4 w-64 h-64 bg-appSecondary/10 rounded-full blur-3xl animate-lightning-flash" style={{ animationDelay: '2s' }}></div>
       
+      {/* Mist Effects */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-16 left-0 w-96 h-32 bg-gradient-to-r from-transparent via-appSurface/5 to-transparent rounded-full blur-3xl animate-mist-drift"></div>
+        <div className="absolute top-1/3 right-0 w-80 h-24 bg-gradient-to-l from-transparent via-appPrimary/3 to-transparent rounded-full blur-2xl animate-mist-drift" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-1/4 left-1/4 w-72 h-20 bg-gradient-to-r from-transparent via-appSecondary/4 to-transparent rounded-full blur-2xl animate-mist-float"></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-16 bg-gradient-to-r from-transparent via-appSurface/6 to-transparent rounded-full blur-3xl animate-mist-float" style={{ animationDelay: '6s' }}></div>
+        <div className="absolute bottom-16 right-1/3 w-88 h-28 bg-gradient-to-l from-transparent via-appPrimary/2 to-transparent rounded-full blur-3xl animate-mist-drift" style={{ animationDelay: '8s' }}></div>
+      </div>
+      
       {/* Lightning Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/3 w-0.5 h-32 bg-gradient-to-b from-transparent via-appPrimary/20 to-transparent animate-lightning-bolt"></div>

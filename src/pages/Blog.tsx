@@ -32,7 +32,7 @@ const Blog = () => {
   const hasMoreArticles = displayedCount < articles.length;
 
   return (
-    <PageLayout currentPage="index">
+    <PageLayout currentPage="blog">
       <div className="pt-24 pb-20">
         <div className="container mx-auto px-4">
           <SectionTitle

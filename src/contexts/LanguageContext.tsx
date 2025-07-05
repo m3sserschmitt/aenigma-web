@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Language, LanguageContextType } from '@/types/language';
 import { translations } from '@/translations';
+import { APP_CONSTANTS } from '@/constants/app';
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -13,7 +14,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 
   // Load language from localStorage on mount
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('aenigma-language') as Language;
+    const savedLanguage = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.LANGUAGE) as Language;
     if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'ro')) {
       setLanguageState(savedLanguage);
     }
@@ -22,7 +23,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   // Custom setLanguage function that also saves to localStorage
   const setLanguage = (newLanguage: Language) => {
     setLanguageState(newLanguage);
-    localStorage.setItem('aenigma-language', newLanguage);
+    localStorage.setItem(APP_CONSTANTS.STORAGE_KEYS.LANGUAGE, newLanguage);
   };
 
   const t = (key: string): string => {

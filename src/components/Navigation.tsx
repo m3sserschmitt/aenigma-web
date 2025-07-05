@@ -13,6 +13,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useState } from "react";
+import { APP_CONSTANTS } from "@/constants/app";
 
 interface NavigationProps {
   currentPage?: 'index' | 'how-it-works' | 'blog';
@@ -23,7 +24,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleDownload = () => {
-    window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank');
+    window.open(APP_CONSTANTS.APK_DOWNLOAD_URL, '_blank');
   };
 
   const handleSectionClick = (sectionId: string) => {

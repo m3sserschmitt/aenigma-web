@@ -3,10 +3,13 @@ import { useSearchParams, Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import PageLayout from "@/components/PageLayout";
 import { Button } from "@/components/ui/button";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Loader2, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import { BlogArticle } from "@/types/blog";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
+import { ErrorAlert } from "@/components/ui/error-alert";
+import { formatDate } from "@/utils/date";
+import { APP_CONSTANTS } from "@/constants/app";
 
 const ArticlePage = () => {
   const { t } = useLanguage();
@@ -31,14 +34,14 @@ const ArticlePage = () => {
         setError(null);
         
         // Try to get article metadata from localStorage first
-        const cachedArticles = localStorage.getItem('blog-articles');
+        const cachedArticles = localStorage.getItem(APP_CONSTANTS.STORAGE_KEYS.BLOG_ARTICLES);
         let articles: BlogArticle[] = [];
         
         if (cachedArticles) {
           articles = JSON.parse(cachedArticles);
         } else {
           // Fallback: fetch from server if not in cache
-          const indexResponse = await fetch('https://articles.aenigma.ro/index.json');
+          const indexResponse = await fetch(APP_CONSTANTS.ARTICLES_API_URL);
           if (!indexResponse.ok) {
             throw new Error(`Failed to fetch article index: ${indexResponse.status}`);
           }
@@ -72,11 +75,6 @@ const ArticlePage = () => {
     fetchArticleData();
   }, [url]);
 
-  const formatDate = (dateString: string | null) => {
-    if (!dateString) return "";
-    const date = new Date(dateString);
-    return date.toLocaleDateString();
-  };
 
   return (
     <PageLayout currentPage="blog">
@@ -105,20 +103,9 @@ const ArticlePage = () => {
             )}
           </div>
 
-          {loading && (
-            <div className="flex justify-center items-center py-20">
-              <Loader2 className="h-8 w-8 text-appPrimary animate-spin" />
-              <span className="ml-2 text-appOnSurface">Loading article...</span>
-            </div>
-          )}
+          {loading && <LoadingSpinner message="Loading article..." />}
 
-          {error && (
-            <Alert className="mb-8 border-red-500/50 bg-red-500/10">
-              <AlertDescription className="text-red-400">
-                {error}
-              </AlertDescription>
-            </Alert>
-          )}
+          {error && <ErrorAlert message={error} />}
 
           {!loading && !error && content && (
             <div className="prose prose-lg max-w-none prose-headings:text-appOnSurface prose-p:text-appOnSurface prose-strong:text-appOnSurface prose-code:text-appPrimary prose-pre:bg-appSurface prose-pre:border prose-pre:border-appSurfaceHighest prose-blockquote:border-l-appPrimary prose-blockquote:text-appOnSurface/80">

@@ -1,68 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import PageLayout from "@/components/PageLayout";
 import SectionTitle from "@/components/SectionTitle";
 import BlogCard from "@/components/BlogCard";
 import { BlogArticle } from "@/types/blog";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
+import { ErrorAlert } from "@/components/ui/error-alert";
+import { useBlogArticles } from "@/hooks/useBlogArticles";
+import { APP_CONSTANTS } from "@/constants/app";
 
 const Blog = () => {
   const { t } = useLanguage();
   const navigate = useNavigate();
-  const [articles, setArticles] = useState<BlogArticle[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [displayedCount, setDisplayedCount] = useState(9); // Show 9 articles initially
-  
-  const ARTICLES_PER_PAGE = 6; // Load 6 more articles each time
-
-  useEffect(() => {
-    const fetchArticles = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        
-        // Check localStorage first
-        const cachedArticles = localStorage.getItem('blog-articles');
-        const cacheTimestamp = localStorage.getItem('blog-articles-timestamp');
-        const cacheExpiry = 10 * 60 * 1000; // 10 minutes
-        
-        if (cachedArticles && cacheTimestamp) {
-          const isExpired = Date.now() - parseInt(cacheTimestamp) > cacheExpiry;
-          if (!isExpired) {
-            setArticles(JSON.parse(cachedArticles));
-            setLoading(false);
-            return;
-          }
-        }
-        
-        // Fetch from server
-        const response = await fetch('https://articles.aenigma.ro/index.json');
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data: BlogArticle[] = await response.json();
-        
-        // Cache the data
-        localStorage.setItem('blog-articles', JSON.stringify(data));
-        localStorage.setItem('blog-articles-timestamp', Date.now().toString());
-        
-        setArticles(data || []);
-      } catch (err) {
-        console.error('Error fetching articles:', err);
-        setError(t('blog.error'));
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchArticles();
-  }, [t]);
+  const { articles, loading, error } = useBlogArticles(t('blog.error'));
+  const [displayedCount, setDisplayedCount] = useState<number>(APP_CONSTANTS.INITIAL_ARTICLES_COUNT);
 
   const handleReadArticle = (article: BlogArticle) => {
     const params = new URLSearchParams({
@@ -72,7 +25,7 @@ const Blog = () => {
   };
 
   const handleShowMore = () => {
-    setDisplayedCount(prev => prev + ARTICLES_PER_PAGE);
+    setDisplayedCount(prev => prev + APP_CONSTANTS.ARTICLES_PER_PAGE);
   };
 
   const displayedArticles = articles.slice(0, displayedCount);
@@ -88,20 +41,9 @@ const Blog = () => {
             className="mb-16"
           />
 
-          {loading && (
-            <div className="flex justify-center items-center py-20">
-              <Loader2 className="h-8 w-8 text-appPrimary animate-spin" />
-              <span className="ml-2 text-appOnSurface">{t('blog.loading')}</span>
-            </div>
-          )}
+          {loading && <LoadingSpinner message={t('blog.loading')} />}
 
-          {error && (
-            <Alert className="mb-8 border-red-500/50 bg-red-500/10">
-              <AlertDescription className="text-red-400">
-                {error}
-              </AlertDescription>
-            </Alert>
-          )}
+          {error && <ErrorAlert message={error} />}
 
           {!loading && !error && articles.length === 0 && (
             <div className="text-center py-20">

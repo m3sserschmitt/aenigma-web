@@ -1,7 +1,10 @@
 
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Download, Github } from "lucide-react";
-import { useLanguage } from "@/contexts/LanguageContext";
+import Logo from "@/components/Logo";
+import SectionTitle from "@/components/SectionTitle";
+import { APP_CONSTANTS } from "@/constants/app";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -36,7 +39,7 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-8 py-4 h-auto"
-            onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk', '_blank')}
+            onClick={() => window.open(APP_CONSTANTS.APK_DOWNLOAD_URL, '_blank')}
           >
             <Download className="h-5 w-5 mr-2" />
             {t('hero.downloadButton')}
@@ -46,7 +49,7 @@ const HeroSection = () => {
             variant="outline" 
             size="lg" 
             className="border-appSurfaceHighest text-appOnSurface hover:bg-appSurface text-lg px-8 py-4 h-auto"
-            onClick={() => window.open('https://github.com/m3sserschmitt/aenigma-android', '_blank')}
+            onClick={() => window.open(APP_CONSTANTS.GITHUB_REPO_URL, '_blank')}
           >
             <Github className="h-5 w-5 mr-2" />
             {t('hero.githubButton')}

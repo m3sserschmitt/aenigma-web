@@ -1,0 +1,21 @@
+// App-wide constants
+export const APP_CONSTANTS = {
+  // URLs
+  APK_DOWNLOAD_URL: 'https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk',
+  GITHUB_REPO_URL: 'https://github.com/m3sserschmitt/aenigma-android',
+  ARTICLES_API_URL: 'https://articles.aenigma.ro/index.json',
+  
+  // Cache settings
+  CACHE_EXPIRY_MS: 10 * 60 * 1000, // 10 minutes
+  
+  // Blog pagination
+  ARTICLES_PER_PAGE: 6,
+  INITIAL_ARTICLES_COUNT: 9,
+  
+  // LocalStorage keys
+  STORAGE_KEYS: {
+    BLOG_ARTICLES: 'blog-articles',
+    BLOG_ARTICLES_TIMESTAMP: 'blog-articles-timestamp',
+    LANGUAGE: 'aenigma-language',
+  }
+} as const;

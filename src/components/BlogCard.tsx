@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { BlogArticle } from "@/types/blog";
 import { Calendar, ArrowRight } from "lucide-react";
+import { formatDate } from "@/utils/date";
 
 interface BlogCardProps {
   article: BlogArticle;
@@ -11,11 +12,6 @@ interface BlogCardProps {
 
 const BlogCard = ({ article, onRead }: BlogCardProps) => {
   const { t } = useLanguage();
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString();
-  };
 
   return (
     <Card className="bg-appSurface border-appSurfaceHighest hover:border-appPrimary/30 transition-all duration-200 group">

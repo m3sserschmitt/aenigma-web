@@ -1,6 +1,7 @@
 
 import { useLanguage } from "@/contexts/LanguageContext";
 import Logo from "@/components/Logo";
+import { APP_CONSTANTS } from "@/constants/app";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -16,7 +17,7 @@ const Footer = () => {
         </p>
         <div className="flex justify-center space-x-6 text-sm text-appOnBackground mb-6">
           <a href="/#privacy" className="hover:text-appOnPrimary transition-colors">{t('footer.privacyPolicy')}</a>
-          <a href="https://github.com/m3sserschmitt/aenigma-android" target="_blank" rel="noopener noreferrer" className="hover:text-appOnPrimary transition-colors">{t('footer.sourceCode')}</a>
+          <a href={APP_CONSTANTS.GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-appOnPrimary transition-colors">{t('footer.sourceCode')}</a>
         </div>
         
         {/* Privacy Policy Section */}

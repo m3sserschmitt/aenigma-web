@@ -1,5 +1,5 @@
 
-import { Shield, Lock, Key, FileSignature, QrCode } from "lucide-react";
+import { Shield, Lock, Key, Fingerprint, QrCode, Eye, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import FeatureCard from "@/components/FeatureCard";
 import PageLayout from "@/components/PageLayout";
@@ -23,7 +23,7 @@ const HowItWorks = () => {
 
   const keyFeatures = [
     {
-      icon: <Key className="h-6 w-6 text-appPrimary" />,
+      icon: <Eye className="h-6 w-6 text-appPrimary" />,
       title: t('howItWorks.publicKey.title'),
       description: t('howItWorks.publicKey.description')
     },
@@ -36,12 +36,12 @@ const HowItWorks = () => {
 
   const signingFeatures = [
     {
-      icon: <Shield className="h-6 w-6 text-appPrimary" />,
+      icon: <Fingerprint className="h-6 w-6 text-appPrimary" />,
       title: "Authenticity",
       description: t('howItWorks.authenticity')
     },
     {
-      icon: <Lock className="h-6 w-6 text-appSecondary" />,
+      icon: <CheckCircle className="h-6 w-6 text-appSecondary" />,
       title: "Integrity",
       description: t('howItWorks.integrity')
     }

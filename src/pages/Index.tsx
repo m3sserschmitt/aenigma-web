@@ -1,4 +1,4 @@
-import { Shield, MessageSquare, Users, Lock, Smartphone, Github } from "lucide-react";
+import { Shield, MessageSquare, Users, Key, Smartphone, Github, Globe, EyeOff, Lock } from "lucide-react";
 import { useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import HeroSection from "@/components/HeroSection";
@@ -28,7 +28,7 @@ const Index = () => {
       description: t('features.e2e.description')
     },
     {
-      icon: <Lock className="h-8 w-8 text-appPrimary" />,
+      icon: <Globe className="h-8 w-8 text-appPrimary" />,
       title: t('features.tor.title'),
       description: t('features.tor.description')
     },
@@ -38,7 +38,7 @@ const Index = () => {
       description: t('features.groups.description')
     },
     {
-      icon: <MessageSquare className="h-8 w-8 text-appSecondary" />,
+      icon: <EyeOff className="h-8 w-8 text-appSecondary" />,
       title: t('features.zeroKnowledge.title'),
       description: t('features.zeroKnowledge.description')
     },
@@ -61,12 +61,12 @@ const Index = () => {
       description: t('security.openssl.description')
     },
     {
-      icon: <Lock className="h-6 w-6 text-appPrimary" />,
+      icon: <Key className="h-6 w-6 text-appPrimary" />,
       title: t('security.publicKey.title'),
       description: t('security.publicKey.description')
     },
     {
-      icon: <Lock className="h-6 w-6 text-appPrimary" />,
+      icon: <Globe className="h-6 w-6 text-appPrimary" />,
       title: t('security.torNetwork.title'),
       description: t('security.torNetwork.description')
     }

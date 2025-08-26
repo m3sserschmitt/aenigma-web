@@ -4,7 +4,7 @@ import Logo from "@/components/Logo";
 import { APP_CONSTANTS } from "@/constants/app";
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer className="py-12 px-4 border-t border-appSurfaceHighest">
@@ -16,7 +16,7 @@ const Footer = () => {
           {t('footer.tagline')}
         </p>
         <div className="flex justify-center space-x-6 text-sm text-appOnBackground mb-6">
-          <a href="/#privacy" className="hover:text-appOnPrimary transition-colors">{t('footer.privacyPolicy')}</a>
+          <a href={`/#/blog/article?url=https://articles.aenigma.ro/privacy-policy-${language}.md`} className="hover:text-appOnPrimary transition-colors">{t('footer.privacyPolicy')}</a>
           <a href={APP_CONSTANTS.GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-appOnPrimary transition-colors">{t('footer.sourceCode')}</a>
         </div>
         

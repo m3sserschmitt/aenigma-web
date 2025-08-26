@@ -20,14 +20,6 @@ const Footer = () => {
           <a href={APP_CONSTANTS.GITHUB_REPO_URL} target="_blank" rel="noopener noreferrer" className="hover:text-appOnPrimary transition-colors">{t('footer.sourceCode')}</a>
         </div>
         
-        {/* Privacy Policy Section */}
-        <div id="privacy" className="max-w-2xl mx-auto mb-6 p-6 bg-appSurface/30 rounded-lg border border-appSurfaceHighest">
-          <h3 className="text-lg font-semibold text-appOnPrimary mb-3">{t('footer.privacyTitle')}</h3>
-          <p className="text-appOnBackground text-sm leading-relaxed">
-            {t('footer.privacyText')}
-          </p>
-        </div>
-        
         <p className="text-appSecondary text-sm mt-4">
           {t('footer.copyright')}
         </p>

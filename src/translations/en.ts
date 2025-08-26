@@ -84,8 +84,8 @@ export const enTranslations = {
   
   // Blog
   'nav.blog': 'Struggles',
-  'blog.title': 'Security & Privacy Blog',
-  'blog.subtitle': 'Latest insights on cryptography, privacy, and secure communications',
+  'blog.title': 'Struggles',
+  'blog.subtitle': 'About the realities of our days',
   'blog.loading': 'Loading articles...',
   'blog.error': 'Error loading articles. Please try again later.',
   'blog.backToList': 'Back to articles',

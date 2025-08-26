@@ -84,8 +84,8 @@ export const roTranslations = {
   
   // Blog
   'nav.blog': 'Frământări',
-  'blog.title': 'Blog Securitate & Confidențialitate',
-  'blog.subtitle': 'Ultimele perspective asupra criptografiei, confidențialității și comunicațiilor sigure',
+  'blog.title': 'Frământări',
+  'blog.subtitle': 'Despre realitățile zilelor noastre',
   'blog.loading': 'Se încarcă articolele...',
   'blog.error': 'Eroare la încărcarea articolelor. Vă rugăm să încercați din nou.',
   'blog.backToList': 'Înapoi la articole',

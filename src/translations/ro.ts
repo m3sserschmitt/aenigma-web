@@ -1,6 +1,7 @@
 
 export const roTranslations = {
   // Navigation
+  'nav.about': 'Despre',
   'nav.features': 'Funcționalități',
   'nav.security': 'Securitate',
   'nav.howItWorks': 'Cum funcționează',
@@ -82,7 +83,7 @@ export const roTranslations = {
   'cta.dataCollection': 'Date colectate',
   
   // Blog
-  'nav.blog': 'Blog',
+  'nav.blog': 'Frământări',
   'blog.title': 'Blog Securitate & Confidențialitate',
   'blog.subtitle': 'Ultimele perspective asupra criptografiei, confidențialității și comunicațiilor sigure',
   'blog.loading': 'Se încarcă articolele...',

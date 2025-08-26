@@ -78,7 +78,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
               currentPage === 'index' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
             }`}
           >
-            About
+            {t('nav.about')}
           </button>
           <button 
             onClick={handleHowItWorksClick}
@@ -141,7 +141,7 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
                     currentPage === 'index' ? 'text-appPrimary font-medium' : 'text-appOnSurface'
                   }`}
                 >
-                  About
+                  {t('nav.about')}
                 </button>
                 <button 
                   onClick={handleHowItWorksClick}

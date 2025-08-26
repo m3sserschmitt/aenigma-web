@@ -1,6 +1,7 @@
 
 export const enTranslations = {
   // Navigation
+  'nav.about': 'About',
   'nav.features': 'Features',
   'nav.security': 'Security',
   'nav.howItWorks': 'How it works',
@@ -82,7 +83,7 @@ export const enTranslations = {
   'cta.dataCollection': 'Data collection',
   
   // Blog
-  'nav.blog': 'Blog',
+  'nav.blog': 'Struggles',
   'blog.title': 'Security & Privacy Blog',
   'blog.subtitle': 'Latest insights on cryptography, privacy, and secure communications',
   'blog.loading': 'Loading articles...',

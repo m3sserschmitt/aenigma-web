@@ -8,8 +8,8 @@ export const roTranslations = {
   'nav.getApp': 'Descarcă aplicația',
   
   // Hero Section
-  'hero.title1': 'Luptă împotriva',
-  'hero.title2': 'hegemoniei Big Tech',
+  'hero.title1': 'O nouă paradigmă a',
+  'hero.title2': 'comunicațiilor private',
   'hero.subtitle': 'Democrația se construiește și prin mijloacele tehnologiei informației - de la scrisori și ziare la telecomunicațiile moderne. Libertatea va înflori doar când oamenii sunt liberi să facă schimb de idei.',
   'hero.downloadButton': 'Descarcă pentru Android',
   'hero.githubButton': 'Vezi codul sursă',

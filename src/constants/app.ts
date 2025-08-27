@@ -1,7 +1,7 @@
 // App-wide constants
 export const APP_CONSTANTS = {
   // URLs
-  APK_DOWNLOAD_URL: 'https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.0.1/aenigma-v1.0.1.apk',
+  APK_DOWNLOAD_URL: 'https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.1.1/aenigma-v1.1.1.apk',
   GITHUB_REPO_URL: 'https://github.com/m3sserschmitt/aenigma-android',
   
   // Articles Index URLs

@@ -132,7 +132,7 @@ const HeroSection = () => {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in">
           <button 
-            className="h-auto"
+            className="h-14 flex items-center"
             onClick={() => window.open(APP_CONSTANTS.PLAY_STORE_URL, '_blank')}
           >
             <img src={googlePlayBadge} alt={t('hero.playStoreButton')} className="h-14" />

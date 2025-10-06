@@ -23,7 +23,7 @@ const CallToAction = () => {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <button 
-              className="h-auto"
+              className="h-16 flex items-center"
               onClick={() => window.open(APP_CONSTANTS.PLAY_STORE_URL, '_blank')}
             >
               <img src={googlePlayBadge} alt={t('cta.playStoreButton')} className="h-16" />

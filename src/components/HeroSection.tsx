@@ -8,6 +8,7 @@ import { APP_CONSTANTS } from "@/constants/app";
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "@tsparticles/slim";
+import googlePlayBadge from "@/assets/google-play-badge.svg";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -130,14 +131,12 @@ const HeroSection = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in">
-          <Button 
-            size="lg" 
-            className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-8 py-4 h-auto"
+          <button 
+            className="h-auto"
             onClick={() => window.open(APP_CONSTANTS.PLAY_STORE_URL, '_blank')}
           >
-            <Download className="h-5 w-5 mr-2" />
-            {t('hero.playStoreButton')}
-          </Button>
+            <img src={googlePlayBadge} alt={t('hero.playStoreButton')} className="h-14" />
+          </button>
           
           <Button 
             size="lg" 

@@ -140,7 +140,7 @@ const HeroSection = () => {
           
           <Button 
             size="lg" 
-            className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-8 py-4 h-auto"
+            className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-8 h-14"
             onClick={() => window.open(APP_CONSTANTS.APK_DOWNLOAD_URL, '_blank')}
           >
             <Download className="h-5 w-5 mr-2" />
@@ -150,7 +150,7 @@ const HeroSection = () => {
           <Button 
             variant="outline" 
             size="lg" 
-            className="border-appSurfaceHighest text-appOnSurface hover:bg-appSurface text-lg px-8 py-4 h-auto"
+            className="border-appSurfaceHighest text-appOnSurface hover:bg-appSurface text-lg px-8 h-14"
             onClick={() => window.open(APP_CONSTANTS.GITHUB_REPO_URL, '_blank')}
           >
             <Github className="h-5 w-5 mr-2" />

@@ -2,6 +2,7 @@
 export const APP_CONSTANTS = {
   // URLs
   APK_DOWNLOAD_URL: 'https://github.com/m3sserschmitt/aenigma-android/releases/download/v1.1.1/aenigma-v1.1.1.apk',
+  PLAY_STORE_URL: 'https://play.google.com/store/apps/details?id=ro.aenigma',
   GITHUB_REPO_URL: 'https://github.com/m3sserschmitt/aenigma-android',
   
   // Articles Index URLs

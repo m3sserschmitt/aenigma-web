@@ -133,6 +133,15 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-8 py-4 h-auto"
+            onClick={() => window.open(APP_CONSTANTS.PLAY_STORE_URL, '_blank')}
+          >
+            <Download className="h-5 w-5 mr-2" />
+            {t('hero.playStoreButton')}
+          </Button>
+          
+          <Button 
+            size="lg" 
+            className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-8 py-4 h-auto"
             onClick={() => window.open(APP_CONSTANTS.APK_DOWNLOAD_URL, '_blank')}
           >
             <Download className="h-5 w-5 mr-2" />

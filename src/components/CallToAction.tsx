@@ -24,6 +24,15 @@ const CallToAction = () => {
             <Button 
               size="lg" 
               className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300"
+              onClick={() => window.open(APP_CONSTANTS.PLAY_STORE_URL, '_blank')}
+            >
+              <Download className="h-6 w-6 mr-3" />
+              {t('cta.playStoreButton')}
+            </Button>
+            
+            <Button 
+              size="lg" 
+              className="bg-appPrimary hover:bg-appPrimary/80 text-appOnPrimary text-lg px-10 py-6 h-auto shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => window.open(APP_CONSTANTS.APK_DOWNLOAD_URL, '_blank')}
             >
               <Download className="h-6 w-6 mr-3" />

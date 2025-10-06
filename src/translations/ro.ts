@@ -7,6 +7,8 @@ export const roTranslations = {
   'nav.howItWorks': 'Cum funcționează',
   'nav.download': 'Descărcare',
   'nav.getApp': 'Descarcă aplicația',
+  'nav.playStore': 'Descarcă din Play Store',
+  'nav.blog': 'Lupte',
   
   // Hero Section
   'hero.title1': 'O nouă paradigmă a',
@@ -85,7 +87,6 @@ export const roTranslations = {
   'cta.dataCollection': 'Date colectate',
   
   // Blog
-  'nav.blog': 'Frământări',
   'blog.title': 'Frământări',
   'blog.subtitle': 'Despre realitățile zilelor noastre',
   'blog.loading': 'Se încarcă articolele...',

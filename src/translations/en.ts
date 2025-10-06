@@ -7,6 +7,8 @@ export const enTranslations = {
   'nav.howItWorks': 'How it works',
   'nav.download': 'Download',
   'nav.getApp': 'Get app',
+  'nav.playStore': 'Get it on Play Store',
+  'nav.blog': 'Blog',
   
   // Hero Section
   'hero.title1': 'A new paradigm of',
@@ -85,7 +87,6 @@ export const enTranslations = {
   'cta.dataCollection': 'Data collection',
   
   // Blog
-  'nav.blog': 'Struggles',
   'blog.title': 'Struggles',
   'blog.subtitle': 'About the realities of our days',
   'blog.loading': 'Loading articles...',

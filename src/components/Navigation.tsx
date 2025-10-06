@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/sheet";
 import { useState } from "react";
 import { APP_CONSTANTS } from "@/constants/app";
+import googlePlayBadge from "@/assets/google-play-badge.svg";
 
 interface NavigationProps {
   currentPage?: 'index' | 'how-it-works' | 'blog';
@@ -25,6 +26,10 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
 
   const handleDownload = () => {
     window.open(APP_CONSTANTS.APK_DOWNLOAD_URL, '_blank');
+  };
+
+  const handlePlayStore = () => {
+    window.open(APP_CONSTANTS.PLAY_STORE_URL, '_blank');
   };
 
   const handleSectionClick = (sectionId: string) => {
@@ -101,6 +106,12 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
         {/* Desktop Controls */}
         <div className="hidden md:flex items-center space-x-2">
           <LanguageSwitcher />
+          <button 
+            className="h-8 flex items-center"
+            onClick={handlePlayStore}
+          >
+            <img src={googlePlayBadge} alt={t('nav.playStore')} className="h-8" />
+          </button>
           <Button 
             variant="outline" 
             size="sm"
@@ -114,6 +125,12 @@ const Navigation = ({ currentPage = 'index' }: NavigationProps) => {
         {/* Mobile Controls */}
         <div className="flex md:hidden items-center space-x-2">
           <LanguageSwitcher />
+          <button 
+            className="h-8 flex items-center"
+            onClick={handlePlayStore}
+          >
+            <img src={googlePlayBadge} alt={t('nav.playStore')} className="h-8" />
+          </button>
           <Button 
             variant="outline" 
             size="sm"

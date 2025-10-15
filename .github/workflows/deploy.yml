@@ -30,6 +30,13 @@ jobs:
       - name: Disable Jekyll (create .nojekyll)
         run: touch dist/.nojekyll
 
+      - name: Verify .well-known is present
+        run: |
+          echo "Listing dist root:"
+          ls -la dist
+          echo "Listing dist/.well-known (if present):"
+          ls -la dist/.well-known || echo "dist/.well-known not found"
+
       - name: Deploy to GitHub Pages
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

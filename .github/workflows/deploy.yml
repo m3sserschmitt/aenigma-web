@@ -38,9 +38,7 @@ jobs:
           ls -la dist/.well-known || echo "dist/.well-known not found"
 
       - name: Deploy to GitHub Pages
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npx gh-pages -d dist \
-            -u 'Romulus-Emanuel Ruja <romulus-emanuel.ruja@tutanota.com>' \
-            -r https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

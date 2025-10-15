@@ -27,6 +27,9 @@ jobs:
       - name: Add CNAME for custom domain
         run: echo 'web.aenigma.ro' > dist/CNAME
 
+      - name: Disable Jekyll (create .nojekyll)
+        run: touch dist/.nojekyll
+
       - name: Deploy to GitHub Pages
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

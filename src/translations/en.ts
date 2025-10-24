@@ -8,11 +8,11 @@ export const enTranslations = {
   'nav.download': 'Download',
   'nav.getApp': 'Get app',
   'nav.playStore': 'Get it on Play Store',
-  'nav.blog': 'Blog',
+  'nav.blog': 'Struggles',
   
   // Hero Section
-  'hero.title1': 'A new paradigm of',
-  'hero.title2': 'private communications',
+  'hero.title1': 'Take a stand',
+  'hero.title2': 'against Big Tech hegemony',
   'hero.subtitle': 'Democracy is also built by the means of information technology - from letters and newspapers to modern telecommunications. Liberty will flourish only when people are free to exchange ideas.',
   'hero.downloadButton': 'Download for Android',
   'hero.playStoreButton': 'Get it on Play Store',
@@ -88,7 +88,7 @@ export const enTranslations = {
   
   // Blog
   'blog.title': 'Struggles',
-  'blog.subtitle': 'About the realities of our days',
+  'blog.subtitle': '',
   'blog.loading': 'Loading articles...',
   'blog.error': 'Error loading articles. Please try again later.',
   'blog.backToList': 'Back to articles',

@@ -1,3 +1,4 @@
+import AppIcon from './AppIcon';
 
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg';
@@ -6,10 +7,10 @@ interface LogoProps {
 }
 
 const Logo = ({ size = 'md', showText = true, className = '' }: LogoProps) => {
-  const sizeClasses = {
-    sm: 'h-6 w-6',
-    md: 'h-8 w-8',
-    lg: 'h-10 w-10'
+  const iconSizeMap = {
+    sm: 'xs' as const,
+    md: 'sm' as const,
+    lg: 'md' as const
   };
 
   const textSizeClasses = {
@@ -20,11 +21,7 @@ const Logo = ({ size = 'md', showText = true, className = '' }: LogoProps) => {
 
   return (
     <div className={`flex items-center space-x-2 ${className}`}>
-      <img 
-        src="/icon.png" 
-        alt="Aenigma Logo" 
-        className={sizeClasses[size]} 
-      />
+      <AppIcon size={iconSizeMap[size]} />
       {showText && (
         <span className={`${textSizeClasses[size]} font-bold text-appOnPrimary hidden sm:inline`}>
           Aenigma

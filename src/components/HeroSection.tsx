@@ -9,6 +9,7 @@ import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "@tsparticles/slim";
 import googlePlayBadge from "@/assets/google-play-badge.png";
+import AppIcon from "@/components/AppIcon";
 
 const HeroSection = () => {
   const { t } = useLanguage();
@@ -113,7 +114,7 @@ const HeroSection = () => {
       
       <div className="container mx-auto text-center relative z-10">
         <div className="flex justify-center mb-8 animate-fade-in">
-          <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-32 w-32" />
+          <AppIcon size="xl" />
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
@@ -164,7 +165,7 @@ const HeroSection = () => {
             <div className="bg-appBackground rounded-2xl p-4 space-y-3">
               <div className="flex items-center space-x-3">
                 <div className="w-16 h-16 bg-gradient-to-r from-appPrimary to-appSecondary rounded-full flex items-center justify-center">
-                  <img src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" alt="Aenigma Logo" className="h-12 w-12" />
+                  <AppIcon size="md" />
                 </div>
                 <div>
                   <div className="text-sm font-medium text-appOnPrimary">Aenigma</div>

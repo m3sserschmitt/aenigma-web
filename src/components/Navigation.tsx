@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/sheet";
 import { useState } from "react";
 import { APP_CONSTANTS } from "@/constants/app";
-import googlePlayBadge from "@/assets/google-play-badge.svg";
+import googlePlayBadge from "@/assets/google-play-badge.png";
 
 interface NavigationProps {
   currentPage?: 'index' | 'how-it-works' | 'blog';

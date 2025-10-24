@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Github } from "lucide-react";
 import SectionTitle from "@/components/SectionTitle";
 import { APP_CONSTANTS } from "@/constants/app";
-import googlePlayBadge from "@/assets/google-play-badge.svg";
+import googlePlayBadge from "@/assets/google-play-badge.png";
 
 const CallToAction = () => {
   const { t } = useLanguage();

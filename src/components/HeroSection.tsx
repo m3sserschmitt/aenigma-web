@@ -8,7 +8,7 @@ import { APP_CONSTANTS } from "@/constants/app";
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "@tsparticles/slim";
-import googlePlayBadge from "@/assets/google-play-badge.svg";
+import googlePlayBadge from "@/assets/google-play-badge.png";
 
 const HeroSection = () => {
   const { t } = useLanguage();

@@ -88,7 +88,7 @@ export const enTranslations = {
   
   // Blog
   'blog.title': 'Struggles',
-  'blog.subtitle': '──────────────────',
+  'blog.subtitle': '·········⋆༺𓆩❀𓆪༻⋆·········',
   'blog.loading': 'Loading articles...',
   'blog.error': 'Error loading articles. Please try again later.',
   'blog.backToList': 'Back to articles',

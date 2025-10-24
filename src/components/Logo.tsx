@@ -21,7 +21,7 @@ const Logo = ({ size = 'md', showText = true, className = '' }: LogoProps) => {
   return (
     <div className={`flex items-center space-x-2 ${className}`}>
       <img 
-        src="/lovable-uploads/531ed3bb-9999-4fdf-940c-e6f1ba71c700.png" 
+        src="/icon.png" 
         alt="Aenigma Logo" 
         className={sizeClasses[size]} 
       />

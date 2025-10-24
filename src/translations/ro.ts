@@ -8,11 +8,11 @@ export const roTranslations = {
   'nav.download': 'Descărcare',
   'nav.getApp': 'Descarcă aplicația',
   'nav.playStore': 'Descarcă din Play Store',
-  'nav.blog': 'Lupte',
+  'nav.blog': 'Frământări',
   
   // Hero Section
-  'hero.title1': 'O nouă paradigmă a',
-  'hero.title2': 'comunicațiilor private',
+  'hero.title1': 'Rezistă',
+  'hero.title2': 'hegemoniei Big Tech',
   'hero.subtitle': 'Democrația se construiește și prin mijloacele tehnologiei informației - de la scrisori și ziare la telecomunicațiile moderne. Libertatea va înflori doar când oamenii sunt liberi să facă schimb de idei.',
   'hero.downloadButton': 'Descarcă pentru Android',
   'hero.playStoreButton': 'Descarcă din Play Store',
@@ -88,7 +88,7 @@ export const roTranslations = {
   
   // Blog
   'blog.title': 'Frământări',
-  'blog.subtitle': 'Despre realitățile zilelor noastre',
+  'blog.subtitle': '',
   'blog.loading': 'Se încarcă articolele...',
   'blog.error': 'Eroare la încărcarea articolelor. Vă rugăm să încercați din nou.',
   'blog.backToList': 'Înapoi la articole',

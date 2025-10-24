@@ -88,7 +88,7 @@ export const roTranslations = {
   
   // Blog
   'blog.title': 'Frământări',
-  'blog.subtitle': '',
+  'blog.subtitle': '  ',
   'blog.loading': 'Se încarcă articolele...',
   'blog.error': 'Eroare la încărcarea articolelor. Vă rugăm să încercați din nou.',
   'blog.backToList': 'Înapoi la articole',

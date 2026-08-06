@@ -37,12 +37,12 @@ const HowItWorks = () => {
   const signingFeatures = [
     {
       icon: <Fingerprint className="h-6 w-6 text-appPrimary" />,
-      title: "Authenticity",
+      title: t('howItWorks.authenticity.title'),
       description: t('howItWorks.authenticity')
     },
     {
       icon: <CheckCircle className="h-6 w-6 text-appSecondary" />,
-      title: "Integrity",
+      title: t('howItWorks.integrity.title'),
       description: t('howItWorks.integrity')
     }
   ];

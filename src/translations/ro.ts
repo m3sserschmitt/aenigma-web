@@ -67,8 +67,10 @@ export const roTranslations = {
   'howItWorks.keysNote': 'Doar cheia ta privată poate deschide mesajele sigilate pentru tine — nici măcar noi nu le putem citi.',
   'howItWorks.signing.title': 'Fiecare mesaj este semnat',
   'howItWorks.signing.description': 'Pentru a ne asigura că mesajele sunt cu adevărat de la tine, fiecare este semnat digital folosind cheia ta privată. Asta înseamnă:',
-  'howItWorks.authenticity': 'Autenticitate: Destinatarul poate verifica că mesajul a fost chiar trimis de tine.',
-  'howItWorks.integrity': 'Integritate: Mesajul nu a fost schimbat sau falsificat.',
+  'howItWorks.authenticity.title': 'Autenticitate',
+  'howItWorks.authenticity': 'Destinatarul poate verifica că mesajul a fost chiar trimis de tine.',
+  'howItWorks.integrity': 'Mesajul nu a fost schimbat sau falsificat.',
+  'howItWorks.integrity.title': 'Integritate',
   'howItWorks.sharing.title': 'Partajarea ușoară și sigură a cheilor',
   'howItWorks.sharing.description': 'Pentru a începe să conversezi în siguranță, doar scanează un cod QR sau partajează un link de conexiune. Așa se face schimbul de chei publice. După aceea, toate mesajele dintre tine și contactul tău sunt criptate de la un capăt la altul automat.',
   'howItWorks.privacy.title': 'Intimitatea ta, sub controlul tău',
@@ -78,7 +80,7 @@ export const roTranslations = {
   
   // Call to Action
   'cta.title': 'Gata să-ți securizezi comunicațiile?',
-  'cta.subtitle': 'Alătură-te miilor de utilizatori care au încredere în Aenigma pentru nevoile lor de mesagerie privată',
+  'cta.subtitle': 'Alătură-te celor care au încredere în Aenigma pentru nevoile lor de mesagerie privată',
   'cta.downloadButton': 'Descarcă acum',
   'cta.playStoreButton': 'Descarcă din Play Store',
   'cta.githubButton': 'Explorează codul',
@@ -101,7 +103,7 @@ export const roTranslations = {
   'footer.sourceCode': 'Codul sursă',
   'footer.privacyTitle': 'Politica de confidențialitate',
   'footer.privacyText': 'Aenigma nu colectează, nu stochează și nu procesează nicio informație personală despre utilizatorii săi. Comunicațiile tale sunt criptate de la un capăt la altul și rutate prin rețeaua TOR pentru anonimat complet. Nu putem și nu vom accesa mesajele tale, contactele sau alte date personale.',
-  'footer.copyright': '© 2025 Aenigma. Sursă deschisă și auditabil.',
+  'footer.copyright': '© 2025 - 2026 Aenigma. Sursă deschisă și auditabil.',
   'footer.madeWithLove': 'Construit cu ❤️ în România',
 
   // Encryption Flow

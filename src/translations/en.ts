@@ -67,8 +67,10 @@ export const enTranslations = {
   'howItWorks.keysNote': 'Only your private key can open the messages sealed for you — not even we can read them.',
   'howItWorks.signing.title': 'Every message is signed',
   'howItWorks.signing.description': 'To make sure messages are truly from you, each one is digitally signed using your private key. That means:',
-  'howItWorks.authenticity': 'Authenticity: The recipient can verify that the message was really sent by you.',
-  'howItWorks.integrity': 'Integrity: The message hasn\'t been changed or forged.',
+  'howItWorks.authenticity': 'The recipient can verify that the message was really sent by you.',
+  'howItWorks.authenticity.title': 'Authenticity',
+  'howItWorks.integrity': 'The message hasn\'t been changed or forged.',
+  'howItWorks.integrity.title': 'Integrity',
   'howItWorks.sharing.title': 'Easy & secure key sharing',
   'howItWorks.sharing.description': 'To start chatting securely, just scan a QR code or share a connection link. That\'s how your public key gets exchanged. After that, all messages between you and your contact are end-to-end encrypted automatically.',
   'howItWorks.privacy.title': 'Your privacy, your control',
@@ -78,7 +80,7 @@ export const enTranslations = {
   
   // Call to Action
   'cta.title': 'Ready to secure your communications?',
-  'cta.subtitle': 'Join thousands of users who trust Aenigma for their private messaging needs',
+  'cta.subtitle': 'Join those who trust Aenigma for their private messaging needs',
   'cta.downloadButton': 'Download now',
   'cta.playStoreButton': 'Get it on Play Store',
   'cta.githubButton': 'Explore code',
@@ -101,6 +103,6 @@ export const enTranslations = {
   'footer.sourceCode': 'Source code',
   'footer.privacyTitle': 'Privacy policy',
   'footer.privacyText': 'Aenigma does not collect, store, or process any personal information about its users. Your communications are end-to-end encrypted and routed through the TOR network for complete anonymity. We cannot and will not access your messages, contacts, or any other personal data.',
-  'footer.copyright': '© 2025 Aenigma. Open source and auditable.',
+  'footer.copyright': '© 2025 - 2026 Aenigma. Open source and auditable.',
   'footer.madeWithLove': 'Made with ❤️ in Romania',
 };

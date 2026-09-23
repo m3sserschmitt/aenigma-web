@@ -138,7 +138,7 @@ const ArticlePage = () => {
 
           {!loading && !error && content && (
             <div 
-              className="prose prose-lg max-w-none prose-headings:text-appOnSurface prose-p:text-appOnSurface prose-strong:text-appOnSurface prose-code:text-appPrimary prose-pre:bg-appSurface prose-pre:border prose-pre:border-appSurfaceHighest prose-blockquote:border-l-appPrimary prose-blockquote:text-appOnSurface/80"
+              className="prose prose-lg max-w-none prose-li:text-appOnSurface prose-a:text-appOnSurface prose-headings:text-appOnSurface prose-p:text-appOnSurface prose-strong:text-appOnSurface prose-code:text-appOnSurface prose-pre:bg-appSurface prose-pre:border prose-pre:border-appSurfaceHighest prose-blockquote:border-l-appPrimary prose-blockquote:text-appOnSurface/80"
               dangerouslySetInnerHTML={{
                 __html: DOMPurify.sanitize(marked.parse(content) as string)
               }}
